@@ -432,7 +432,6 @@
           a.src = g;
           m.parentNode.insertBefore(a, m)
       })(window, document, 'script', '//www.pazellmer.com/analytics.js', 'ga');
-
       ga('create', 'UA-55360839-1', 'auto');
       ga('require', 'linkid', 'linkid.js');
       ga('require', 'displayfeatures');
