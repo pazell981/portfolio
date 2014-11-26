@@ -24,19 +24,24 @@
               rotation = -1;
             }
             var start_rotate = Math.round(Math.random()*rotation*45);
+            rotation *= Math.round(Math.random()) * 180;
             var g = container
-            .append("g")
-            .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")")
-            .attr("class", "star_"+id);
+              .append("g")
+              .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")rotate("+start_rotate+")")
+              .attr("class", "star_"+id);
+            g.transition()
+              .duration(6000)
+              .attr("transform","translate("+d.x_axis+", "+d.y_axis+")rotate("+rotation+")")
             var star = g.append("polygon")
-            .attr("class", "star_"+id)
-            .attr("visibility", "visible")
-            .attr("points", CalculateStarPoints(0, 0, 4, d.radius*4*multiplier, d.radius*multiplier))
-            .style("fill", "rgb(255,255,255)")
-            .style("opacity", 0)
-            .attr("transform","rotate("+start_rotate+")");
-            star.transition().duration(4000).attr("transform", function(d, i, a) { return d3.interpolateString(a, "rotate("+(rotation*180)+")"); }).style("opacity", .85);
-            star.transition().delay(2000).duration(2000).attr("transform", function(d, i, a) { return d3.interpolateString(a, "rotate("+(rotation*180)+")"); }).style("opacity",0);
+              .attr("class", "star_"+id)
+              .attr("visibility", "visible")
+              .attr("points", CalculateStarPoints(0, 0, 4, d.radius*4*multiplier, d.radius*multiplier))
+              .style("fill", "rgb(255,255,255)")
+              .style("opacity", 0)
+            star.transition().duration(4000)
+              .style("opacity", .85);
+            star.transition().delay(2000).duration(2000)
+              .style("opacity",0);
             setTimeout(function(){
               d3.selectAll(".star_"+rid).remove();
               TwinklingStar();
@@ -53,20 +58,26 @@
             if (rotation == 0){
               rotation = -1;
             }
+            var start_rotate = Math.round(Math.random()*rotation*45);
+            rotation *= Math.round(Math.random()) * 180;
             var g = container
-            .append("g")
-            .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")")
-            .attr("class", "sstar_"+sid);
-            g.transition().duration(6000).attr("transform", "translate("+arrayC[n][Math.floor(Math.random()*500)].x_axis+", "+arrayC[n][Math.floor(Math.random()*500)].y_axis+")").ease("circle");
+              .append("g")
+              .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")rotate("+start_rotate+")")
+              .attr("class", "sstar_"+sid);
+            g.transition()
+              .duration(6000)
+              .attr("transform", "translate("+arrayC[n][Math.floor(Math.random()*500)].x_axis+", "+arrayC[n][Math.floor(Math.random()*500)].y_axis+")rotate("+rotation+")")
+              .ease("circle");
             var star = g.append("polygon")
-            .attr("class", "sstar_"+sid)
-            .attr("visibility", "visible")
-            .attr("points", CalculateStarPoints(d.x_axis, d.y_axis, 8, d.radius*4*multiplier, d.radius*multiplier))
-            .style("fill", "rgb(255,255,255)")
-            .style("opacity", 0)
-            .attr("transform", function(d){ return "rotate("+rotation+")"})
-            star.transition().duration(4000).attr("transform", function(d, i, a) { return d3.interpolateString(a, "rotate("+(rotation*180)+")"); }).style("opacity", .95);
-            star.transition().delay(2000).duration(2000).attr("transform", function(d, i, a) { return d3.interpolateString(a, "rotate("+(rotation*180)+")"); }).style("opacity",0);             
+              .attr("class", "sstar_"+sid)
+              .attr("visibility", "visible")
+              .attr("points", CalculateStarPoints(d.x_axis, d.y_axis, 8, d.radius*4*multiplier, d.radius*multiplier))
+              .style("fill", "rgb(255,255,255)")
+              .style("opacity", 0)
+            star.transition().duration(4000)
+              .style("opacity", .95);
+            star.transition().delay(2000).duration(2000)
+              .style("opacity",0);             
             setTimeout(function(){
               d3.select(".sstar_"+srid).remove();
               ShootingStar();

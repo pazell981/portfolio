@@ -55,20 +55,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="lib/js/head.min.js" charset="utf-8"></script>
-    <script>
-        head.load(
-          [{jQuery:"/lib/js/jquery-2.1.1.min.js"},
-          {d3:"/lib/js/d3.min.js"}]
-        );
-        head.ready("jQuery", function(){
-          head.load({veil:"/lib/js/jquery.unveil.min.js"})
-        })
-        head.ready("veil", function(){
-          $(function() {
-              $("img").unveil();
-          });
-        })
-    </script>
   </head>
   <body>
     <div id="curtain" style="margin:0;padding:0;position: absolute;background: -moz-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -webkit-gradient(radial,center center,0,center center,100%,color-stop(0,rgba(255,255,255,1)),color-stop(100%,rgba(187,187,187,1)));background: -webkit-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -o-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -ms-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);height: 100vh;width: 100vw;top: 0;left: 0;z-index: 1200;">
@@ -76,11 +62,6 @@
     <div class='container-fluid'>
       <div class='row'>
         <div id = 'wrapper1' class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-          <script>
-              head.ready("d3", function () {
-                  head.load("/assets/javascripts/starryfield.min.js");
-              });
-          </script>
           <div class='row'>
             <div id='topbar'>
               <div id='topbarlarge' class='col-sm-12 col-md-12 col-lg-12'>
@@ -361,6 +342,21 @@
     </div><!-- end of #resumepanel -->
 
     <script>
+      head.load(
+        [{jQuery:"/lib/js/jquery-2.1.1.min.js"},
+        {d3:"/lib/js/d3.min.js"}]
+      );
+      head.ready("jQuery", function(){
+        head.load({veil:"/lib/js/jquery.unveil.min.js"})
+      })
+      head.ready("veil", function(){
+        $(function() {
+            $("img").unveil();
+        });
+      })
+      head.ready("d3", function () {
+          head.load("/assets/javascripts/starryfield.min.js");
+      });
       head.ready("jQuery", function () {
           head.load([{jQueryUI:"/lib/js/jquery-ui.min.js"}, {bootstrap:"/lib/js/bootstrap.min.js"}, {warpJs:"assets/javascripts/warp.min.js"}, {Reveal:"lib/js/reveal.min.js"}]);
       });
