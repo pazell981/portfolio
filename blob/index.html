@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript - Advanced Object Patterns - JS Balls">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Balls</title>
+    <link rel="stylesheet" href="blob-style.css">
+
+</head>
+
+<body>
+
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    	<script>
+	var randomNumberBetween = function(min, max){
+		return Math.random()*(max-min) + min;
+	}
+	function Circle(cx, cy, html_id, r, rcolor, gcolor, bcolor){
+		var html_id = html_id;
+		this.info = { cx: cx,  cy: cy, id: html_id, r: r, rcolor: rcolor, gcolor: gcolor, bcolor: bcolor};
+		
+		//private function that generates a random number
+		var randomNumberBetween = function(min, max){
+			return Math.random()*(max-min) + min;
+		}
+
+		this.initialize = function(){
+			//give a random velocity for the circle based on circle size, larger is slower
+			this.info.velocity = {
+				x: randomNumberBetween(-2,2)/(this.info.r/40),
+				y: randomNumberBetween(-2,2)/(this.info.r/40)
+			}
+
+			//create a circle 
+			var circle = makeSVG('circle', 
+				{ 	cx: this.info.cx,
+				  	cy: this.info.cy,
+				  	r:  this.info.r,
+				  	id: html_id,
+				  	style: "fill: rgb("+this.info.rcolor+","+this.info.gcolor+","+this.info.bcolor+")"
+				});
+
+			document.getElementById('svg').appendChild(circle);
+		}
+
+		this.update = function(time){
+			var el = document.getElementById(html_id);
+
+			//see if the circle is going outside the browser based on radius size. if it is, reverse the velocity
+			if( this.info.cx > document.body.clientWidth-this.info.r || this.info.cx <= this.info.r)
+			{
+				this.info.velocity.x = this.info.velocity.x * -1;
+			}
+			if( this.info.cy > document.body.clientHeight-this.info.r || this.info.cy <= this.info.r)
+			{
+				this.info.velocity.y = this.info.velocity.y * -1;
+			}
+
+			this.info.cx = this.info.cx + this.info.velocity.x*time;
+			this.info.cy = this.info.cy + this.info.velocity.y*time;
+
+			el.setAttribute("cx", this.info.cx);
+			el.setAttribute("cy", this.info.cy);
+		}
+
+		//creates the SVG element and returns it
+		var makeSVG = function(tag, attrs) {
+	        var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
+	        for (var k in attrs)
+	        {
+	            el.setAttribute(k, attrs[k]);
+	        }
+	        return el;
+	    }
+
+	    this.initialize();
+	}
+
+	function PlayGround()
+	{
+		var counter = 0;  //counts the number of circles created
+		var circles = [ ]; //array that will hold all the circles created in the app
+
+		//a loop that updates the circle's position on the screen
+		this.loop = function(){
+			for(circle in circles){
+				circles[circle].update(1);
+			}
+			for(circle1 in circles){
+				x1=circles[circle1].info.cx;
+				y1=circles[circle1].info.cy;
+				r1=circles[circle1].info.r;
+				rcolor1=circles[circle1].info.rcolor;
+				gcolor1=circles[circle1].info.gcolor;
+				bcolor1=circles[circle1].info.bcolor;
+				for(circle2 in circles){
+					if(circles[circle1].info.id!=circles[circle2].info.id){
+						x2=circles[circle2].info.cx;
+						y2=circles[circle2].info.cy;
+						r2=circles[circle2].info.r;
+						rcolor2=circles[circle2].info.rcolor;
+						gcolor2=circles[circle2].info.gcolor;
+						bcolor2=circles[circle2].info.bcolor;
+						d=Math.sqrt((Math.pow((x2-x1),2)+Math.pow((y2-y1),2)));
+						if(d<(r1+r2)){
+							var id1=circles[circle1].info.id;
+							var id2=circles[circle2].info.id;
+							var parent=document.getElementById('svg');
+							parent.getElementById(id1).remove();
+							parent.getElementById(id2).remove();
+							delete circles[circle1];
+							delete circles[circle2];
+							//making the blob
+							r=r1+r2;
+							x=(x1+x2)/2;
+							y=(y1+y2)/2;
+							rcolor=parseInt((rcolor1+rcolor2)/2);
+							gcolor=parseInt((gcolor1+gcolor2)/2);
+							bcolor=parseInt((bcolor1+bcolor2)/2);
+							playground.createNewCircle(x1,y1,r,rcolor,gcolor,bcolor);
+						}
+					}
+				}
+			}
+		}
+
+		this.createNewCircle = function(x,y,r,rcolor,gcolor,bcolor){
+			var new_circle = new Circle(x,y,counter++,r,rcolor,gcolor,bcolor);
+			circles.push(new_circle);
+			// console.log('created a new circle!', new_circle);
+		}
+
+		//create two circles when the game starts
+		this.createNewCircle(document.body.clientWidth/2, document.body.clientHeight/2, 10,parseInt(randomNumberBetween(0,255)),parseInt(randomNumberBetween(0,255)),parseInt(randomNumberBetween(0,255)));
+		// this.createNewCircle(document.body.clientWidth/4, document.body.clientHeight/4, 10);
+	}
+
+	var playground = new PlayGround();
+	setInterval(playground.loop, 15);
+
+	// document.onclick = function(e) {
+	// 	playground.createNewCircle(e.x,e.y,10);
+	// }
+	// var mousedown_time;
+
+	function getTime(){
+		var date = new Date();
+		return date.getTime();
+	}
+
+	document.onmousedown = function(e){
+		mousedown_time = getTime();
+	}
+	document.onmouseup = function(e){
+		time_pressed = getTime() - mousedown_time;
+		if(time_pressed/10>40){
+			r = 40;
+		} else {
+			r = time_pressed/10;
+		}
+		playground.createNewCircle(e.x,e.y,r,parseInt(randomNumberBetween(0,255)),parseInt(randomNumberBetween(0,255)),parseInt(randomNumberBetween(0,255)));
+	}
+	</script>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-55360839-1', 'auto');
+      ga('require', 'linkid', 'linkid.js');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

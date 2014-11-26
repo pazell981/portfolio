@@ -1,0 +1,246 @@
+::selection{ background-color: #E13300; color: white; }
+::moz-selection{ background-color: #E13300; color: white; }
+::webkit-selection{ background-color: #E13300; color: white; }
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif;;}
+body {
+	background-color: #fff;
+	margin: 40px;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+}
+a {
+	color: #003399;
+	background-color: transparent;
+	font-weight: normal;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Abril Fatface', cursive;
+}
+h1 {
+	background-color: transparent;
+	font-size: 20px;
+	font-weight: normal;
+}
+code {
+	font-family: Consolas, Monaco, Courier New, Courier, monospace;
+	font-size: 12px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	display: block;
+	margin: 14px 0 14px 0;
+	padding: 12px 10px 12px 10px;
+}
+fieldset{
+	width: 400px;
+	margin: 20px auto;
+	border: 1px solid #AAAAAA;
+}
+legend {
+	padding:0
+}
+h3.fail{
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #E56568;
+	color: #212121;
+}
+h3.success{
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #47A447;
+	color: #212121;
+}
+p.footer{
+	text-align: right;
+	font-size: 11px;
+	border-top: 1px solid #D0D0D0;
+	line-height: 32px;
+	padding: 0 10px 0 10px;
+	margin: 20px 0 0 0;
+}
+.column{
+	width: 440px;
+	margin: 0px 20px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 20px;
+}
+.column fieldset, #lower fieldset, #body fieldset{
+	padding: 25px;
+	width: 100%;
+}
+.column legend, #lower legend, #body legend{
+	border-bottom: 0px;
+	width: auto;
+}
+.column label, #lower label, #body label{
+	display: block;
+}
+.column input[type="submit"], #lower input[type="submit"], #body input[type="submit"]{
+	display: block;
+	margin: 5px;
+}
+.turq{
+	color: #39B3D7;
+	font-family: 'Abril Fatface', cursive;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+.italics{
+	font-style: italic;
+}
+.turqback .active a, .turqback .active a:hover {
+    background-color: #39B3D7 !important;
+}
+.comments{
+	width: 650px;
+	margin-left: 100px;
+}
+.content{
+	display: block;
+	text-indent: 20px;
+	border-bottom: 1px dotted #000000;
+	margin-bottom: 10px;
+}
+.posts{
+	width: 875px;
+	margin: 20px auto;
+	border-bottom: 1px solid #000000;
+}
+.name{
+	font-weight: bolder;
+}
+.date{
+	font-style: italic;
+}
+.blog{
+	font-weight: bold;
+}
+.post{
+	display: block;
+	text-indent: 20px;
+}
+.comments{
+	width: 650px;
+	margin-left: 100px;
+}
+.comment_box{
+	margin-bottom: 50px;
+}
+.comment_box input[type="submit"], .comment input[type="submit"], .posts input[type="submit"]{
+	display: block;
+	margin:20px 0px;
+}
+.content{
+	display: block;
+	text-indent: 20px;
+	border-bottom: 1px dotted #000000;
+	margin-bottom: 10px;
+}
+.comment_box textarea{
+	width: 875px !important;
+    margin-left: 100px;
+    height: 50px;
+    overflow: scroll;
+}
+.delete{
+	display:block;
+}
+.width{
+	width: 150px;
+	vertical-align: top !important;
+	margin-left: 50px !important;
+}
+#container{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow: scroll;
+	margin: 10px;
+	border: 1px solid #D0D0D0;
+	-webkit-box-shadow: 0 0 8px #D0D0D0;
+}
+#wrapper{
+	position: relative;
+	width: 1000px;
+	margin: 0px auto;
+}
+#title{
+	position:relative;
+	vertical-align: top;
+	width: 1000px;
+	height: 80px;
+	padding: 10px 10px;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+#title h1{
+	height: 40px;
+	margin: 10px 10px;
+}
+#user{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 50px;
+	width: 200px;
+	vertical-align: top;
+	text-align: right;
+	margin: 15px 10px;
+	padding: 10px;
+}
+#user h6{
+	display: inline-block;
+	margin-right: 5px;
+}
+#body{
+	margin: 0 15px 0px 15px;
+	padding-bottom: 50px;
+}
+#login,#register{
+	width:400px;
+	margin: 50px auto;
+}
+#lower{
+	width: 100%;
+}
+#lower textarea, #body textarea{
+	width: 100%;
+	height: 100px;
+}
+#userinfo{
+	width: 350px;
+	margin: 10px auto;
+}
+#userinfo label{
+	width: 100px;
+}
+#userinfo p {
+	width: 200px;
+	display: inline-block;
+}
+#post{
+	display: block;
+	margin-bottom: 50px;
+}
+#blog_id{
+	display: inline-block !important;
+	margin: 5px 0px;
+	width: 70%;
+}
+#post_submit{
+	vertical-align: top !important;
+	display: inline-block !important;
+	width: 150px;
+	margin-left: 125px;
+}
+

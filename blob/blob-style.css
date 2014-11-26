@@ -1,0 +1,11 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #FFFFFF;
+}
+#svg{
+	width: 100vw;
+	height: 100vh;
+}

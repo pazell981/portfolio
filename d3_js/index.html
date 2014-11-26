@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D3 Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="container">
+        <script type="text/javascript">
+        var arrayC = [];
+        for (i = 0; i < 500; i++) {
+            arrayC.push([parseInt(Math.random() * 1500), parseInt(Math.random() * 750)]);
+        }
+        rindex1 = parseInt(Math.random() * 500) - 1;
+        var arrayP = [
+            [arrayC[rindex1][0],
+                [arrayC[rindex1][1]]
+            ]
+        ];
+        for (i = 0; i < 25; i++) {
+            arrayP.push([parseInt(Math.random() * 1500), parseInt(Math.random() * 750)]);
+        }
+        rindex2 = parseInt(Math.random() * 500) - 1;
+        arrayP.push([arrayC[rindex2][0], arrayC[rindex2][1]]);
+        var drag = d3.behavior.drag().origin(function(d) {
+            return {
+                x: d[0],
+                y: d[1]
+            };
+        }).on("dragstart", dragstarted).on("drag", dragged).on("dragend", dragended);
+        var lineFunction = d3.svg.line().x(function(d) {
+            return d[0];
+        }).y(function(d) {
+            return d[1];
+        }).interpolate("monotone");
+        var originR = 0;
+        var container = d3.select("body").on("touchstart", nozoom).on("touchmove", nozoom).select("div").append("svg").attr("width", "100%").attr("height", "100%").attr("xmlns", "http://www.w3.org/2000/svg");
+        var gradient = container.append("defs").append("linearGradient").attr("id", "gradient").attr("x1", "0%").attr("y1", "0%").attr("x2", "100%").attr("y2", "100%").attr("spreadMethod", "pad");
+        gradient.append("stop").attr("offset", "0%").attr("stop-color", "#111111").attr("stop-opacity", 1);
+        gradient.append("stop").attr("offset", "100%").attr("stop-color", "#999999").attr("stop-opacity", 1);
+        var flightPath = container.append("path").attr("d", lineFunction(arrayP)).attr("stroke", "url(#gradient)").attr("stroke-width", 3).attr("fill", "none").call(drag);
+        var length = flightPath.node().getTotalLength();
+        flightPath.attr("id", "firstpath").attr("stroke-dasharray", length + " " + length).attr("stroke-dashoffset", length).transition().duration(40000).ease("linear").attr("stroke-dashoffset", 0);
+        var circles = container.selectAll("circle").data(arrayC).enter().append("circle").attr("transform", function(d) {
+            return "translate(" + d + ")";
+        }).attr("r", function(d) {
+            return parseInt(Math.random() * 10);
+        }).attr("id", function(d, i) {
+            return i;
+        }).style("fill", function() {
+            return "rgb(70,130," + parseInt(Math.random() * 255) + ")";
+        }).call(drag);
+        d3.select("svg").select("path#firstpath").transition().delay(40000).duration(20000).style("stroke-opacity", 0);
+
+        function dragstarted() {
+            originR = this.getAttribute("r");
+            this.parentNode.appendChild(this);
+            d3.select(this).transition().ease("elastic").duration(500).attr("r", originR * 4);
+        }
+
+        function dragged(d) {
+            d[0] = d3.event.x;
+            d[1] = d3.event.y;
+            d3.select(this).attr("transform", "translate(" + d + ")");
+        }
+
+        function dragended() {
+            d3.select(this).transition()
+                .ease("elastic")
+                .duration(500)
+                .attr("r", originR);
+            var draggedID = d3.select(this).attr("id");
+            var c = d3.select(this).attr("transform").substring(10, d3.select(this).attr("transform").length - 1).split(",");
+            arrayL = [];
+            arrayC[draggedID] = [c[0], c[1]];
+            arrayL.push(c);
+            for (i = 0; i < 10; i++) {
+                arrayL.push([parseInt(Math.random() * 1500), parseInt(Math.random() * 750)]);
+            }
+            rindex = parseInt(Math.random() * 500) - 1;
+            arrayL.push([arrayC[rindex][0], arrayC[rindex][1]]);
+            var flightPath = container.append("path").attr("d", lineFunction(arrayL)).attr("id", function(d) {
+                return "path" + draggedID;
+            }).attr("stroke", "url(#gradient)").attr("stroke-width", 3).attr("fill", "none").call(drag);
+            var length = flightPath.node().getTotalLength();
+            flightPath.attr("stroke-dasharray", length + " " + length).attr("stroke-dashoffset", length).transition().duration(60000).ease("linear").attr("stroke-dashoffset", 0);
+            d3.select((function(d) {
+                id = "path#path" + draggedID;
+                return id;
+            })()).transition().delay(40000).duration(20000).style("stroke-opacity", 0);
+        }
+
+        function nozoom() {
+            d3.event.preventDefault();
+        }
+        </script>
+    </div>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-55360839-1', 'auto');
+      ga('require', 'linkid', 'linkid.js');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
