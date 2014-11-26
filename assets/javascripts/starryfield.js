@@ -24,7 +24,7 @@
               rotation = -1;
             }
             var start_rotate = Math.round(Math.random()*rotation*45);
-            rotation *= Math.round(Math.random()) * 180;
+            rotation *= (Math.round(Math.random() * 90)+90);
             var g = container
               .append("g")
               .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")rotate("+start_rotate+")")
@@ -59,7 +59,7 @@
               rotation = -1;
             }
             var start_rotate = Math.round(Math.random()*rotation*45);
-            rotation *= Math.round(Math.random()) * 180;
+            rotation *= (Math.round(Math.random() * 90)+90);
             var g = container
               .append("g")
               .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")rotate("+start_rotate+")")
@@ -160,73 +160,73 @@
           };
           if ($(window).width()<481){
             TwinklingStar()
-            setTimeout(TwinklingStar(),2000);
+            setTimeout(TwinklingStar,2000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),3000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,3000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
             ShootingStar();
           } else if ($(window).width()<768){
             TwinklingStar()
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),4000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,4000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),5000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,5000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),5000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,5000);
             ShootingStar();
-            setTimeout(ShootingStar(),4000);
+            setTimeout(ShootingStar,4000);
           } else if ($(window).width()<1200){
             TwinklingStar()
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),4000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,4000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),4000);
-            setTimeout(TwinklingStar(),6000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,4000);
+            setTimeout(TwinklingStar,6000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),4000);
-            setTimeout(TwinklingStar(),5000);
-            setTimeout(TwinklingStar(),6000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,4000);
+            setTimeout(TwinklingStar,5000);
+            setTimeout(TwinklingStar,6000);
             ShootingStar();
-            setTimeout(ShootingStar(),2000);
-            setTimeout(ShootingStar(),4000);
+            setTimeout(ShootingStar,2000);
+            setTimeout(ShootingStar,4000);
           } else {
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),4000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,4000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),4000);
-            setTimeout(TwinklingStar(),5000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,4000);
+            setTimeout(TwinklingStar,5000);
             TwinklingStar()
-            setTimeout(TwinklingStar(),1000);
-            setTimeout(TwinklingStar(),2000);
-            setTimeout(TwinklingStar(),3000);
-            setTimeout(TwinklingStar(),4000);
-            setTimeout(TwinklingStar(),5000);
-            setTimeout(TwinklingStar(),6000);
+            setTimeout(TwinklingStar,1000);
+            setTimeout(TwinklingStar,2000);
+            setTimeout(TwinklingStar,3000);
+            setTimeout(TwinklingStar,4000);
+            setTimeout(TwinklingStar,5000);
+            setTimeout(TwinklingStar,6000);
             ShootingStar();
-            setTimeout(ShootingStar(),2000);
-            setTimeout(ShootingStar(),3000);
-            setTimeout(ShootingStar(),4000);
+            setTimeout(ShootingStar,2000);
+            setTimeout(ShootingStar,3000);
+            setTimeout(ShootingStar,4000);
           }
         }());
