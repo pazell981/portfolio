@@ -33,13 +33,13 @@ $(document).ready(function() {
         }
     });
     Reveal.addEventListener("bio", function() {
-        $("#bio img").trigger("unveil");
+        // $("#bio img").trigger("unveil");
         setTimeout(function() {
             $("#biopanel img").show().addClass("animated rollIn")
         }, 2000)
     });
     $("#portfolio").click(function() {
-        $("#portfolio img").trigger("unveil");
+        // $("#portfolio img").trigger("unveil");
         Reveal.configure({
             37: null,
             38: null,
@@ -59,7 +59,7 @@ $(document).ready(function() {
         }, 8e3);
     });
     Reveal.addEventListener("portfolio", function() {
-        $("portfolio img").trigger("unveil");
+        // $("portfolio img").trigger("unveil");
         Reveal.configure({
             37: null,
             38: null,
@@ -210,7 +210,7 @@ $(document).ready(function() {
         return false
     });
     Reveal.addEventListener("profiles", function() {
-        $("#profiles img").trigger("unveil");
+        // $("#profiles img").trigger("unveil");
         setTimeout(function() {
             $("#monster").show().addClass("animated zoomInUp")
         }, 2e3);
