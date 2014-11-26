@@ -24,11 +24,11 @@
               rotation = -1;
             }
             var start_rotate = Math.round(Math.random()*rotation*45);
-            var g = container
+            var svg = container
             .append("g")
             .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")")
             .attr("class", "star_"+id);
-            var star = g.append("polygon")
+            var star = svg.append("polygon")
             .attr("class", "star_"+id)
             .attr("visibility", "visible")
             .attr("points", CalculateStarPoints(0, 0, 4, d.radius*4*multiplier, d.radius*multiplier))
@@ -53,12 +53,12 @@
             if (rotation == 0){
               rotation = -1;
             }
-            var g = container
+            var svg = container
             .append("g")
             .attr("transform", "translate("+d.x_axis+", "+d.y_axis+")")
             .attr("class", "sstar_"+sid);
-            g.transition().duration(6000).attr("transform", "translate("+arrayC[n][Math.floor(Math.random()*500)].x_axis+", "+arrayC[n][Math.floor(Math.random()*500)].y_axis+")").ease("circle");
-            var star = g.append("polygon")
+            svg.transition().duration(6000).attr("transform", "translate("+arrayC[n][Math.floor(Math.random()*500)].x_axis+", "+arrayC[n][Math.floor(Math.random()*500)].y_axis+")").ease("circle");
+            var star = svg.append("polygon")
             .attr("class", "sstar_"+sid)
             .attr("visibility", "visible")
             .attr("points", CalculateStarPoints(d.x_axis, d.y_axis, 8, d.radius*4*multiplier, d.radius*multiplier))
