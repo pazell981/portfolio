@@ -32,5 +32,4 @@ function escape_this_string($string){
 	global $connection;
 	return $connection->real_escape_string($string);
 }
-
 ?>
