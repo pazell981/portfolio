@@ -26,6 +26,9 @@
     <meta name="copyright" content="Copyright © 2014 Paul Zellmer. All Rights Reserved.">
     <meta name="author" content="Paul Zellmer">
     <meta name="revisit-after" content="7">
+    <meta property="og:title" content="Paul's Launchpad">
+    <meta property="og:url" content="http://www.pazellmer.com">
+    <meta property="og:image" content="http://www.pazellmer.com/assets/images/image_for_linkedin.jpg">
     <meta http-equiv="cache-control" content="public, max-age=86400">
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://www.pazellmer.com/assets/favicon/apple-touch-icon-57x57.png" />
@@ -60,7 +63,6 @@
   </head>
   <body>
     <div id="curtain" style="margin:0;padding:0;position: absolute;background: -moz-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -webkit-gradient(radial,center center,0,center center,100%,color-stop(0,rgba(255,255,255,1)),color-stop(100%,rgba(187,187,187,1)));background: -webkit-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -o-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -ms-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);height: 100vh;width: 100vw;top: 0;left: 0;z-index: 1200;">
-      <img src="assets/images/image_for_linkedin.jpg" style='display:none'>
     </div>
     <div class='container-fluid'>
       <div class='row'>
