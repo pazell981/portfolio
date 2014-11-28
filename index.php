@@ -20,7 +20,7 @@
 
     <title>Paul's Launchpad - Portfolio of a Web Developer</title>
 
-    <meta name="description" content="The portfolio of Front End/Web Developer, Paul Zellmer.  ">
+    <meta name="description" content="The portfolio of Front End/Web Developer, Paul Zellmer. Experienced in JavaScript, Node JS, Express JS, Angular JS, Ruby on Rails and Python. Able to quickly learn additional frameworks, libraries and plug-ins.">
     <meta name="keywords" content="Paul Zellmer, Web Developer, Front End Developer, Portfolio, Resume, HTML, HTML5, CSS, CSS3, PHP, CodeIgniter, jQuery, D3 JS, JavaScript, Node JS, Express JS, Angular JS, MongoDB, PostgreSQL, MySQL, SQL, Ruby, Ruby on Rails, Git">
     <meta name="robots" content="index">
     <meta name="copyright" content="Copyright © 2014 Paul Zellmer. All Rights Reserved.">
@@ -28,6 +28,7 @@
     <meta name="revisit-after" content="7">
     <meta property="og:title" content="Paul's Launchpad">
     <meta property="og:url" content="http://www.pazellmer.com">
+    <meta property="og:description" content="The portfolio of Front End/Web Developer, Paul Zellmer. Experienced in JavaScript, Node JS, Express JS, Angular JS, Ruby on Rails and Python. Able to quickly learn additional frameworks, libraries and plug-ins.">
     <meta property="og:image" content="http://www.pazellmer.com/assets/images/image_for_linkedin.jpg">
     <meta http-equiv="cache-control" content="public, max-age=86400">
 
