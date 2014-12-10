@@ -695,8 +695,8 @@ h1, h2, h3, h4, h5, h6 {
 #administration {
     display: inline-block;
     position: absolute;
-    left: 25%;
-    top: 25%;
+    left: 50%;
+    top: 50%;
     padding: 25px;
     min-width: 50%;
     min-height: 50%;
@@ -706,6 +706,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     opacity: 1 !important;
     z-index: 150;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 #administration h3 {
     display: block;

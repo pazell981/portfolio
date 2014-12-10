@@ -15,8 +15,9 @@
         $date = date("Y-m-d H:i:s", strtotime(escape_this_string($_POST['date'])));
         $desc = escape_this_string($_POST['description']);
         $tech = escape_this_string($_POST['tech_info']);
+        $active = escape_this_string($_POST['active']);
         $git = escape_this_string($_POST['github_address']);
-        $query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id=" . $project;
+        $query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . ", active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id=" . $project;
       } else {
         move_uploaded_file($_FILES["image"]["tmp_name"], "assets/images/" . $_FILES["image"]["name"]);
       	$user = $_POST['user_id'];
@@ -26,9 +27,10 @@
       	$date = date("Y-m-d H:i:s", strtotime(escape_this_string($_POST['date'])));
       	$desc = escape_this_string($_POST['description']);
       	$tech = escape_this_string($_POST['tech_info']);
+        $active = escape_this_string($_POST['active']);
         $git = escape_this_string($_POST['github_address']);
       	$image = "assets/images/" . $_FILES["image"]["name"];
-      	$query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', image_location='" . $image ."', description='" . $desc . "', tech_info='" . $tech . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time())  . "' WHERE id=" . $project;
+      	$query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', image_location='" . $image ."', description='" . $desc . "', tech_info='" . $tech . ", active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time())  . "' WHERE id=" . $project;
       }
     } else {
       $user = $_POST['user_id'];
@@ -38,8 +40,9 @@
       $date = date("Y-m-d H:i:s", strtotime(escape_this_string($_POST['date'])));
       $desc = escape_this_string($_POST['description']);
       $tech = escape_this_string($_POST['tech_info']);
+      $active = escape_this_string($_POST['active']);
       $git = escape_this_string($_POST['github_address']);
-      $query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id=" . $project;
+      $query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . ", active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id=" . $project;
     }
   	if (run_mysql_query($query)){
   		$_SESSION['success']="Entry updated successfully.";

@@ -19,9 +19,10 @@
       	$date = date("Y-m-d H:i:s", strtotime(escape_this_string($_POST['date'])));
       	$desc = escape_this_string($_POST['description']);
       	$tech = escape_this_string($_POST['tech_info']);
+        $active = escape_this_string($_POST['active']);
         $git = escape_this_string($_POST['github_address']);
       	$image = "assets/images/" . $_FILES["image"]["name"];
-      	$query = "INSERT INTO projects (user_id, title, url, date, description, image_location, tech_info, github_address, created_at, updated_at) VALUES ('" . $user . "', '" . $title . "', '" . $url . "', '" . $date . "', '" . $desc . "', '" . $image . "', '" . $tech . "', '" . $git . "', '" . date('Y-m-d H:i:s', time()) . "', '". date('Y-m-d H:i:s', time()) . "')";
+      	$query = "INSERT INTO projects (user_id, title, url, date, description, image_location, tech_info, active, github_address, created_at, updated_at) VALUES ('" . $user . "', '" . $title . "', '" . $url . "', '" . $date . "', '" . $desc . "', '" . $image . "', '" . $tech . "', '" . $active .", ". $git . "', '" . date('Y-m-d H:i:s', time()) . "', '". date('Y-m-d H:i:s', time()) . "')";
       	if (run_mysql_query($query)){
       		$_SESSION['success']="Entry added successfully.";
       		header('location: administer.php');

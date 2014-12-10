@@ -2,7 +2,7 @@
 <html>
   <?php    
     session_start();
-    include 'new-connection.php';
+    include 'dbConnection.php';
     if (isset($_SESSION['userid'])) {
       $userid = $_SESSION['userid'];
     }
@@ -110,7 +110,10 @@
       </div>
       <div id = 'wrapper2' class='span-12'>
         <div id='administration'>
-          <a href='logoff.php' class='pull-right'>Log off</a>
+          <div class='pull-right'>
+            <a href='administer.php'>Back</a>  |    
+            <a href='logoff.php'>Log off</a>
+          </div>
           <?php 
             if($_SESSION['error']){
               echo "<h3 class='alert alert-error'>" . $_SESSION['error'] . "</h3>";
@@ -120,17 +123,38 @@
             }
           ?>
           <h3>Enter a new project:</h3>
-
-          <form action='add.php' method='post' enctype="multipart/form-data">
+          <form action='add.php' method='post' enctype="multipart/form-data" class='form-horizontal'>
             <input type='hidden' value='secure' name='secure'>
             <input type='hidden' value='<?php echo $userid; ?>' name='user_id'>
-            <input type='text' placeholder='Title' name='title' class="input-block-level">
-            <input type='text' placeholder='URL' name='url' class="input-block-level">
-            <textarea placeholder='Description' name='description' rows='4' class="input-block-level"></textarea>
-            <input type='text' placeholder='Date' name='date' id='datepicker'  class="span3">
-            <input type='file' name='image' class="span5">
-            <textarea placeholder='Technical description' name='tech_info' rows='4' class="input-block-level"></textarea>
-            <input type='text' placeholder='Git Hub Address' name="github_address"  class="input-block-level">
+            <div class='form-group'>
+              <label for="title" class="col-md-4 col-lg-4">Title:  </label>
+              <input type='text' placeholder='Title' name='title' class="input-block-level col-md-8 col-lg-8">
+            </div>
+            <div class='form-group'>
+              <label for='url' class="col-md-4 col-lg-4">URL:  </label>
+              <input type='text' placeholder='URL' name='url' class="input-block-level col-md-8 col-lg-8">
+            </div>
+            <div class='form-group'>
+              <label for='description' class="col-md-4 col-lg-4">Description:  </label>
+              <textarea placeholder='Description' name='description' rows='4' class="input-block-level col-md-8 col-lg-8"></textarea>
+            </div>
+            <div class='form-group'>
+              <label for='date' class="col-md-4 col-lg-4">Date:  </label>
+              <input type='text' placeholder='Date' name='date' id='datepicker'  class="col-md-8 col-lg-8">
+            </div>
+            <div class='form-group'>
+              <label for='image' class="col-md-4 col-lg-4">Image File:  </label>
+              <input type='file' name='image' class=" col-md-8 col-lg-8">
+            </div>
+            <input type='hidden' value='1' name='active'>
+            <div class='form-group'>
+              <label for='tech_info' class="col-md-4 col-lg-4">Technical Description:  </label>
+              <textarea placeholder='Technical description' name='tech_info' rows='4' class="input-block-level col-md-8 col-lg-8"></textarea>
+            </div>
+            <div class='form-group'>
+              <label for='github_address' class="col-md-4 col-lg-4">Github URL:  </label>
+              <input type='text' placeholder='Git Hub Address' name="github_address"  class="input-block-level col-md-8 col-lg-8">
+            </div>
             <input type='submit' value='Submit' class='btn btn-info pull-right'>
           </form>
         </div>

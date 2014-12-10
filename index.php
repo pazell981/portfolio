@@ -103,7 +103,7 @@
               <div class='project_accord'>
                 <!-- start php script for project accordion -->
                 <?php 
-                  $proj_query = "SELECT * FROM projects ORDER BY date";
+                  $proj_query = "SELECT * FROM projects WHERE active = 1 ORDER BY date";
                   $projects = fetch_all($proj_query);
                   if(!is_null($projects)){
                     $i = 0;
@@ -172,7 +172,7 @@
               <div class='project_accord'>
                 <!-- start php script for project accordion -->
                 <?php 
-                  $proj_query = "SELECT * FROM projects ORDER BY date";
+                  $proj_query = "SELECT * FROM projects WHERE active = 1 ORDER BY date";
                   $projects = fetch_all($proj_query);
                   if(!is_null($projects)){
                     $i = 0;

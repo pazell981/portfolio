@@ -125,17 +125,45 @@
           ?>
           <h3>Edit <?php echo $project["title"] ?> project:</h3>
 
-          <form action='edit.php' method='post' enctype="multipart/form-data">
+          <form action='edit.php' method='post' enctype="multipart/form-data" class='form-horizontal'>
             <input type='hidden' value='secure' name='secure'>
             <input type='hidden' value='<?php echo $userid; ?>' name='user_id'>
             <input type='hidden' value='<?php echo $project['id']; ?>' name='project_id'>
-            <input type='text' value='<?php echo $project["title"] ?>'name='title' class="input-block-level">
-            <input type='text' value='<?php echo $project["url"] ?>' name='url' class="input-block-level">
-            <textarea name='description' rows='4' class="input-block-level"><?php echo $project["description"] ?></textarea>
-            <input type='text' value='<?php echo $project["date"] ?>' name='date' id='datepicker'  class="span3">
-            <input type='file' name='image' value='<?php echo $project["image_location"] ?>' class="span5">
-            <textarea name='tech_info' rows='4' class="input-block-level"><?php echo $project["tech_info"] ?></textarea>
-            <input type='text' value='<?php echo $project["github_address"] ?>' name="github_address"  class="input-block-level">
+            <div class='form-group'>
+              <label for="title" class="col-md-4 col-lg-4">Title:  </label>
+              <input type='text' value='<?php echo $project["title"] ?>'name='title' class="input-block-level col-md-8 col-lg-8">
+            </div>
+            <div class='form-group'>
+              <label for='url' class="col-md-4 col-lg-4">URL:  </label>
+              <input type='text' value='<?php echo $project["url"] ?>' name='url' class="input-block-level col-md-8 col-lg-8">
+            </div>
+            <div class='form-group'>
+              <label for='description' class="col-md-4 col-lg-4">Description:  </label>
+              <textarea name='description' rows='4' class="input-block-level col-md-8 col-lg-8"><?php echo $project["description"] ?></textarea>
+            </div>
+            <div class='form-group'>
+              <label for='date' class="col-md-4 col-lg-4">Date:  </label>
+              <input type='text' value='<?php echo $project["date"] ?>' name='date' id='datepicker'  class="span3">
+            </div>
+            <div class='form-group'>
+              <label for='image' class="col-md-4 col-lg-4">Image File:  </label>
+              <input type='file' name='image' value='<?php echo $project["image_location"] ?>' class="span5">
+            </div>
+            <div class='form-group'>
+              <label for='active' class="col-md-4 col-lg-4">Project Active in Portfolio?</label>
+              <select name='active'>
+                <option value='1' <?php if ($project["github_address"]==1){echo "selected='selected'"} ?>>Yes</option>
+                <option value='0' <?php if ($project["github_address"]==0){echo "selected='selected'"} ?>>No</option>
+              </select>
+            </div>
+            <div class='form-group'>
+              <label for='tech_info' class="col-md-4 col-lg-4">Technical Description:  </label>
+              <textarea name='tech_info' rows='4' class="input-block-level col-md-8 col-lg-8"><?php echo $project["tech_info"] ?></textarea>
+            </div>
+            <div class='form-group'>
+              <label for='github_address' class="col-md-4 col-lg-4">Github URL:  </label>
+              <input type='text' value='<?php echo $project["github_address"] ?>' name="github_address"  class="input-block-level col-md-8 col-lg-8">
+            </div>
             <input type='submit' value='Submit' class='btn btn-info pull-right'>
           </form>
         </div>
