@@ -1,6 +1,6 @@
 <?php if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start("ob_gzhandler"); else ob_start(); ?>
 <!doctype html>
-<html lang="en">
+<html lang="en-US" itemscope itemtype="http://schema.org/WebPage">
   <?php     
     session_start();
     include "admin/dbConnection.php";
@@ -18,18 +18,18 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Paul's Launchpad - Portfolio of a Web Developer</title>
+    <title itemprop="name">Paul's Launchpad - Portfolio of a Web Developer</title>
 
-    <meta name="description" content="The portfolio of Front End/Web Developer, Paul Zellmer. Experienced in JavaScript, Node JS, Express JS, Angular JS, Ruby on Rails and Python. Able to quickly learn additional frameworks, libraries and plug-ins.">
+    <meta name="description" itemprop="description" content="The portfolio of Front End/Web Developer, Paul Zellmer. Experienced in JavaScript, Node JS, Express JS, Angular JS, Ruby on Rails and Python. Able to quickly learn additional frameworks, libraries and plug-ins.">
     <meta name="keywords" content="Paul Zellmer, Web Developer, Front End Developer, Portfolio, Resume, HTML, HTML5, CSS, CSS3, PHP, CodeIgniter, jQuery, D3 JS, JavaScript, Node JS, Express JS, Angular JS, MongoDB, PostgreSQL, MySQL, SQL, Ruby, Ruby on Rails, Git">
     <meta name="robots" content="index">
     <meta name="copyright" content="Copyright © 2014 Paul Zellmer. All Rights Reserved.">
-    <meta name="author" content="Paul Zellmer">
-    <meta name="revisit-after" content="7">
+    <meta name="author" itemprop="author" content="Paul Zellmer">
+    <meta name="revisit-after" content="1">
     <meta property="og:title" content="Paul's Launchpad">
-    <meta property="og:url" content="http://www.pazellmer.com">
+    <meta property="og:url" itemprop="url" content="http://www.pazellmer.com">
     <meta property="og:description" content="The portfolio of Front End/Web Developer, Paul Zellmer. Experienced in JavaScript, Node JS, Express JS, Angular JS, Ruby on Rails and Python. Able to quickly learn additional frameworks, libraries and plug-ins.">
-    <meta property="og:image" content="http://www.pazellmer.com/assets/images/image_for_linkedin.jpg">
+    <meta property="og:image" itemprop="image" content="http://www.pazellmer.com/assets/images/image_for_linkedin.jpg">
     <meta http-equiv="cache-control" content="public, max-age=86400">
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://www.pazellmer.com/assets/favicon/apple-touch-icon-57x57.png" />
@@ -138,15 +138,17 @@
                   $i = 0;
                   foreach ($projects as $project) {
                     ?>
-                    <div class='warp'>
+                    <div class='warp' itemscope itemtype="http://schema.org/CreativeWork">
                       <div class='warp_img'>
-                        <img src='<?php echo $project['image_location']; ?>' class='img-rounded' alt='<?php echo $project['title'] ?>'>
+                        <img src='<?php echo $project['image_location']; ?>' class='img-rounded' alt='<?php echo $project['title'] ?>' itemtype="image">
                         <span class='proj_overlay_title'><?php echo $project['title'] ?></span>
                       </div>
                       <div class='warp_desc'>
-                        <h3><?php echo $project['title'] ?></h3>
-                        <label>Date: </label><p><?php echo $project['date']; ?></p>
-                        <label>Description: </label><p><?php echo $project['description']; ?></p>
+                        <h3 itemprop="name"><?php echo $project['title'] ?></h3>
+                        <label>Date: </label><p itemprop="datecreated"><?php echo $project['date']; ?></p>
+                        <label>Description: </label><p itemprop="description"><?php echo $project['description']; ?></p>
+                        <p>GitHub Address: <a itemprop="isBasedOnUrl" href='<?php echo $project['github_address'] ?>' target='_blank'> <?php if ($project['github_address'] == "#"){ echo "Not Available"; } else { echo $project['github_address']; } ?></a></p>
+                        <a itemprop="url" href='<?php echo $project['url']; ?>' style="display: none" >View <?php echo $project['title'] ?></a>
                         <p data-link='<?php echo $project['url']; ?>' class='proj_link link' id='<?php echo $i; ?>'>View Project</p>
                       </div>
                     </div>
@@ -198,9 +200,9 @@
         </div><!-- end of #wrapper3 .row -->
         <div id = 'wrapper2' class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
           <div class='reveal'>
-            <div class = 'slides row'> 
+            <div class = 'slides row' itemprop="mainContentOfPage"> 
               <section id='home' class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                <div id='welcome' class='pointer'>
+                <div id='welcome' class='pointer' itemprop="alternateName">
                   <h2>Welcome to</h2>
                   <h1>Paul's Launchpad</h1>
                 </div>
@@ -211,19 +213,19 @@
               </section>
               <section id='bio' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' data-state='bio'>
                 <h1 class='pointer'>Bio</h1>
-                <div id='biopanel' class='row'>
+                <div id='biopanel' class='row' itemscope itemtype="http://schema.org/Person">
                   <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                    <img src="assets/images/paulzellmerbio.jpg" alt="Paul Zellmer Junior Web Developer" class="pull-left img-circle img-responsive">
+                    <img src="assets/images/paulzellmerbio.jpg" alt="Paul Zellmer Junior Web Developer" class="pull-left img-circle img-responsive" itemprop="image">
                     <div id="bio_text" class='pull-right'>
-                      <p>Hello there!!! My name is Paul Zellmer and I am a recent alumnus of the coding boot camp Coding Dojo.  During my time in the boot camp I trained and developed skills in:</p>
+                      <p>Hello there!!! My name is <span itemprop="name"><span itemprop="givenName">Paul</span> <span itemprop="familyName">Zellmer</span></span>, a <span itemprop="jobTitle">Junior Web Developer</span>.  I am a alumni of <span itemprop="alumniOf">San Francisco State University</span> and a recent alumnus of the coding boot camp <span itemprop="alumniOf">Coding Dojo</span>.  During my time in the boot camp I trained and developed skills in:</p>
                         <ul>
                           <li>JavaScript</li>
                           <li>Python</li>
                           <li>Ruby</li>
                           <li>PHP</li>
                         </ul>
-                      <p>I have found a love for not only the problem solving and troubleshooting aspects of web development but also the design aspect... even if troubleshooting sometimes makes you want to pull out your hair. I have grown a specific interest in developing in the Node/Express JS stack.</p>
-                      <p>So please explore my site, if you have any questions or are interested in hiring me please <a href="index.php#/contact">contact me</a>.</p>
+                      <p>I have found a love for not only the problem solving and troubleshooting aspects of web development but also the design aspect... even if troubleshooting sometimes makes you want to pull out your hair. My specific interest is in developing in the Node/Express JS stack.</p>
+                      <p>So please explore my site, if you have any questions or are interested in hiring me please <a href="index.php#/contact" itemprop="contactPoint">contact me</a>.</p>
                     </div>
                   </div>
                 </div>
@@ -329,7 +331,7 @@
             </div><!-- end of #controlpanelallowed -->
           </div><!-- end of #control -->
           <div class = 'footer'>
-            <ul id='footer-nav'>
+            <ul id='footer-nav' itemprop="breadcrumb">
               <li><a href='#/bio'>Bio</a></li>
               <li><a href='#/skills'>Skills</a></li>
               <li><a href='#/portfolio'>Portfolio</a></li>
@@ -337,7 +339,7 @@
               <li><a href='#/contact'>Contact</a></li>
               <li><a href='#/profiles'>Profiles</a></li>
             </ul>
-            <p>© 2014 Paul Zellmer All Rights Reserved</p>
+            <p>© <span itemprop="copyrightYear">2014</span> <span itemprop="copyrightHolder">Paul Zellmer</span> All Rights Reserved</p>
           </div>
         </div><!-- end of #wrapper2 .col-xs-12 col-sm-12 col-md-12 col-lg-12 -->
       </div>
