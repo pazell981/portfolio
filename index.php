@@ -348,7 +348,7 @@
       <button class='close pull-right'>&times;</button>
       <iframe src="" id='resumeviewer'></iframe>
     </div><!-- end of #resumepanel -->
-    <a href="https://plus.google.com/u/0/102467786629911773317/" rel="publisher"></a>
+    <a href="https://plus.google.com/u/1/100228497470026142875/" rel="publisher"></a>
     <script>
       head.load(
         [{jQuery:"/lib/js/jquery-2.1.1.min.js"},
