@@ -1,6 +1,6 @@
 <?php if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start("ob_gzhandler"); else ob_start(); ?>
 <!doctype html>
-<html>
+<html lang="en">
   <?php     
     session_start();
     include "admin/dbConnection.php";
