@@ -147,7 +147,7 @@
                         <h3 itemprop="name"><?php echo $project['title'] ?></h3>
                         <label>Date: </label><p itemprop="datecreated"><?php echo $project['date']; ?></p>
                         <label>Description: </label><p itemprop="description"><?php echo $project['description']; ?></p>
-                        <p>GitHub Address: <a itemprop="isBasedOnUrl" href='<?php echo $project['github_address'] ?>' target='_blank'> <?php if ($project['github_address'] == "#"){ echo "Not Available"; } else { echo $project['github_address']; } ?></a></p>
+                        <p style="display: none">GitHub Address: <a itemprop="isBasedOnUrl" href='<?php echo $project['github_address'] ?>' target='_blank'> <?php if ($project['github_address'] == "#"){ echo "Not Available"; } else { echo $project['github_address']; } ?></a></p>
                         <a itemprop="url" href='<?php echo $project['url']; ?>' style="display: none" >View <?php echo $project['title'] ?></a>
                         <p data-link='<?php echo $project['url']; ?>' class='proj_link link' id='<?php echo $i; ?>'>View Project</p>
                       </div>
