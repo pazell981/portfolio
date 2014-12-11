@@ -39,39 +39,4 @@
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>http://kwikimart.herokuapp.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://kwikimart.herokuapp.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://pazrockpaperscissors.herokuapp.com</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://zrecipebox.herokuapp.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://rww-dev.elasticbeanstalk.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://pazquoter.herokuapp.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://twitterglobe.elasticbeanstalk.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
 </urlset>
