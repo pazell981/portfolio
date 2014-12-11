@@ -1,0 +1,5 @@
+# robots.txt for http://www.pazellmer.com/
+
+User-agent: *
+Disallow: /admin/
+Disallow: loading.html
