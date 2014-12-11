@@ -2,8 +2,6 @@
 <html>
   <?php    
     session_start();
-    var_dump($_SESSION);
-    die();
     include 'dbConnection.php';
     if (isset($_SESSION['userid'])) {
       $userid = $_SESSION['userid'];
@@ -155,8 +153,8 @@
           <div class='form-group'>
             <label for='active' class="col-md-4 col-lg-4">Project Active in Portfolio?</label>
             <select name='active'>
-              <option value='1' <?php if ($project["github_address"]==1){echo "selected='selected'"} ?>>Yes</option>
-              <option value='0' <?php if ($project["github_address"]==0){echo "selected='selected'"} ?>>No</option>
+              <option value='1' <?php if ($project["active"]==1){echo "selected='selected'";} ?>>Yes</option>
+              <option value='0' <?php if ($project["active"]==0){echo "selected='selected'";} ?>>No</option>
             </select>
           </div>
           <div class='form-group'>
