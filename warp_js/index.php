@@ -5,9 +5,12 @@
 
     <title>Warp JS</title>
 
-    <meta name="robot" content="noindex,nofollow">
+    <meta name="robot" content="index, nofollow">
+    <meta name="description" itemprop="description" content="A gallery or presentation layer that shows an image or whatever HTML you like as well further detail when you click on an item.  Items can also be navigated through using an the keyboard up and down arrows.">
+    <meta name="keywords" content="Paul Zellmer, jQuery, plugin, javascript, gallery, presentation, library, animated, interactive">
     <meta name="copyright" content="Copyright © 2014 Paul Zellmer. All Rights Reserved.">
-    <meta name="author" content="Paul Zellmer">
+    <meta name="author" itemprop="author" content="Paul Zellmer">
+    <meta name="revisit-after" content="7">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

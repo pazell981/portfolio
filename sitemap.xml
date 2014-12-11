@@ -14,4 +14,64 @@
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>http://www.pazellmer.com/blob/index.html</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pazellmer.com/ciwall/index.php</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pazellmer.com/d3_js/index.html</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pazellmer.com/modernize/index.html</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pazellmer.com/php_csv/index.html</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kwikimart.herokuapp.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kwikimart.herokuapp.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pazrockpaperscissors.herokuapp.com</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://zrecipebox.herokuapp.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rww-dev.elasticbeanstalk.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pazquoter.herokuapp.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://twitterglobe.elasticbeanstalk.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>
