@@ -260,8 +260,8 @@ span.clouditem {
 .info {
     display: none;
     position: absolute;
-    left: 25%;
-    top: 25%;
+    left: 50%;
+    top: 50%;
     padding: 25px;
     min-width: 50%;
     min-height: 50%;
@@ -270,7 +270,10 @@ span.clouditem {
     border: 1px outset #999!important;
     border-radius: 5px;
     opacity: 1!important;
-    z-index: 150
+    z-index: 150;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%)
 }
 .link {
     color: #08C
@@ -377,7 +380,10 @@ span.clouditem {
 }
 #biopanel ul {
     display: block;
-    margin: 0 30%
+    margin: 0 25%;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 #bio_text {
     width: 70%;

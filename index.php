@@ -3,7 +3,7 @@
 <html>
   <?php     
     session_start();
-    include "dbConnection.php";
+    include "admin/dbConnection.php";
     if (isset($_SESSION["userid"])) {
         $userid = $_SESSION["userid"];
     }
@@ -222,7 +222,7 @@
                           <li>Ruby</li>
                           <li>PHP</li>
                         </ul>
-                      <p>I have found a love for not only the problem solving and troubleshooting aspects of web development but also the design aspect... even if troubleshooting sometimes makes you want to pull out your hair.</p>
+                      <p>I have found a love for not only the problem solving and troubleshooting aspects of web development but also the design aspect... even if troubleshooting sometimes makes you want to pull out your hair. I have grown a specific interest in developing in the Node/Express JS stack.</p>
                       <p>So please explore my site, if you have any questions or are interested in hiring me please <a href="index.php#/contact">contact me</a>.</p>
                     </div>
                   </div>
@@ -232,7 +232,7 @@
                 <h1>Skill Set</h1>
                 <div tagcloud bw>
                   <?php 
-                    $skills = array('Website Design', 'HTML5', 'CSS3', 'd3 JS', 'Foundation', 'jQuery UI', 'Twitter Bootstrap', 'jQuery', 'Responsive Design', 'JavaScript', 'Node JS', 'Express', 'Angular', 'MongoDB', 'npm', 'socket.io', 'Passport.js', 'Git', 'Ruby', 'PHP', 'AJAX', 'Ruby on Rails', 'Database Design', 'MySQL','SQLite', 'CodeIgniter', 'PostgreSQL', 'Adobe Photoshop','Python', 'Django', 'LESS');
+                    $skills = array('Website Design', 'HTML5', 'CSS3', 'd3 JS', 'Foundation', 'jQuery UI', 'Twitter Bootstrap', 'jQuery', 'Responsive Design', 'JavaScript', 'Node JS', 'Express JS', 'Angular', 'MongoDB', 'npm', 'socket.io', 'Passport.js', 'Git', 'Ruby', 'PHP', 'AJAX', 'Ruby on Rails', 'Database Design', 'MySQL','SQLite', 'CodeIgniter', 'PostgreSQL', 'Adobe Photoshop','Python', 'Django', 'LESS');
                     shuffle($skills);
                     foreach ($skills as $skill) {
                         echo "$skill \n";
@@ -278,7 +278,7 @@
                               <button type="button" class="close" data-dismiss="alert">&times;</button>
                               <p>I am sorry there was an issues sending your message please try again.</p>
                             </div><!-- end of #form_failure -->
-                            <form id='contact_form' class='form-horizontal' action='email.php' method='post'>
+                            <form id='contact_form' class='form-horizontal' action='admin/email.php' method='post'>
                               <input type='hidden' name='secure' value='secure'>
                               <input type='text' name='name' placeholder='Your Name' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' required>
                               <input type='email' name='email' placeholder='Your E-mail Address' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' required>
@@ -320,7 +320,7 @@
                 }
               ?>
               <h3 class='pull-left'>Please login:</h3>
-                <form action='login.php' method='post'>
+                <form action='/admin/login.php' method='post'>
                   <input type='hidden' value='secure' name='secure'>
                   <input type='text' placeholder='E-mail' name='email'>
                   <input type='password' placeholder='Password' name='password'>
