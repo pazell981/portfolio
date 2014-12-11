@@ -207,11 +207,11 @@
                   <h1>Paul's Launchpad</h1>
                 </div>
               </section>
-              <section id='portfolio' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' data-state='portfolio'>
+              <section id='portfolio' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' data-state='portfolio' itemscope itemtype="https://schema.org/CollectionPage">
                 <h2>My</h2>
                 <h1 class='pointer'>Portfolio</h1>
               </section>
-              <section id='bio' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' data-state='bio'>
+              <section id='bio' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' data-state='bio' itemscope itemtype="https://schema.org/ProfilePage">
                 <h1 class='pointer'>Bio</h1>
                 <div id='biopanel' class='row' itemscope itemtype="http://schema.org/Person">
                   <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
@@ -247,7 +247,7 @@
                   <h1 class='pointer'>Resum&eacute;</h1>
                 </div><!-- end of row -->
               </section>
-              <section id='contact' class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+              <section id='contact' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' itemscope itemtype="https://schema.org/ContactPage">
                 <h1 class='pointer'>Contact</h1>
                   <table>
                     <tbody>
