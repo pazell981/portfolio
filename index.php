@@ -132,7 +132,7 @@
                   class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
               <!-- start php script for project display -->
               <?php 
-                $proj_query = "SELECT * FROM projects ORDER BY date";
+                $proj_query = "SELECT * FROM projects WHERE active = 1 ORDER BY date";
                 $projects = fetch_all($proj_query);
                 if(!is_null($projects)){
                   $i = 0;
