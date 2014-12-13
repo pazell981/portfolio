@@ -3,8 +3,10 @@
 	date_default_timezone_set('America/Los_Angeles');
 	include "dbConnection.php";
 	if(!isset($_POST['secure'])){
-		header('location: logoff.php');
-		die();
+    session_destroy();
+    session_start();
+    header('location: ../403.shtml');
+    die();
 	} else {
 		if (isset($_FILES["image"])){
       if (file_exists("assets/images/" . $_FILES["image"]["name"])) {

@@ -1,6 +1,6 @@
 <?php
 	if (!isset($_POST["secure"])){
-		header("location: index.php");
+		header('location: ../403.shtml');
 		die();
 	} else {
 		date_default_timezone_set( "America/Los_Angeles" ); 

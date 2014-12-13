@@ -3,7 +3,9 @@
 	date_default_timezone_set('America/Los_Angeles');
 	include "dbConnection.php";
 	if(!isset($_POST['secure'])){
-		header('location: logoff.php');
+		session_destroy();
+		session_start();
+		header('location: ../403.shtml');
 		die();
 	} else {
     $proj_id = $_POST['id'];

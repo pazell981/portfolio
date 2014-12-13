@@ -3,7 +3,9 @@ session_start();
 include "dbConnection.php";
 
 if(!isset($_POST['secure'])){
-	header('location: index.php');
+	session_destroy();
+	session_start();
+	header('location: ../403.shtml');
 	die();
 } else {
 	$email = escape_this_string($_POST['email']);
