@@ -20,6 +20,8 @@
 
     <title itemprop="name">Paul's Launchpad - Portfolio of a Web Developer</title>
 
+    <link rel="canonical" href="http://www.pazellmer.com">
+    
     <meta name="description" itemprop="description" content="The portfolio of Front End/Web Developer, Paul Zellmer. Experienced in JavaScript, Node JS, Express JS, Angular JS, Ruby on Rails and Python. Able to quickly learn additional frameworks, libraries and plug-ins.">
     <meta name="keywords" content="Paul Zellmer, Web Developer, Front End Developer, Portfolio, Resume, HTML, HTML5, CSS, CSS3, PHP, CodeIgniter, jQuery, D3 JS, JavaScript, Node JS, Express JS, Angular JS, MongoDB, PostgreSQL, MySQL, SQL, Ruby, Ruby on Rails, Git">
     <meta name="robots" content="index">
