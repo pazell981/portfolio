@@ -1,8 +1,10 @@
 <?php
 	function sanitize($data){
 		if ( preg_match( "/[\r\n]/", $data ) {
-			header('location: ../500.shtml');
-			die();		}
+			$output["status"] = "forbidden";
+			echo json_encode($output);
+			die();		
+		}
 	}
 
 	if (!isset($_POST["secure"])){

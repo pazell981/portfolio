@@ -202,6 +202,8 @@ $(document).ready(function() {
                 $("#form_success").fadeIn()
             } else if (e.status == "failure") {
                 $("#form_failure").fadeIn()
+            } else if (e.status == "forbidden"){
+                window.location = "http://www.pazellmer.com/403.shtml";
             }
         }, "json");
         $("input[type=text]").val("");
