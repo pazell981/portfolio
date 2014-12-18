@@ -214,7 +214,7 @@
                 <h1 class='pointer'>Portfolio</h1>
               </section>
               <section id='bio' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' data-state='bio' itemscope itemtype="https://schema.org/ProfilePage">
-                <h1 class='pointer'>Bio</h1>
+                <h1>Bio</h1>
                 <div id='biopanel' class='row' itemscope itemtype="http://schema.org/Person">
                   <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
                     <img src="assets/images/paulzellmerbio.jpg" alt="Paul Zellmer Junior Web Developer" class="pull-left img-circle img-responsive" itemprop="image">
