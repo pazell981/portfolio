@@ -282,7 +282,7 @@
                               <button type="button" class="close" data-dismiss="alert">&times;</button>
                               <p>I am sorry there was an issues sending your message please try again.</p>
                             </div><!-- end of #form_failure -->
-                            <form id='contact_form' class='form-horizontal' action='admin/email.php' method='post'>
+                            <form id='contact_form' class='form-horizontal' action='/admin/email.php' method='post'>
                               <input type='hidden' name='secure' value='secure'>
                               <input type='text' name='name' placeholder='Your Name' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' required>
                               <input type='email' name='email' placeholder='Your E-mail Address' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' required>
