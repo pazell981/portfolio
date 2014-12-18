@@ -1,0 +1,1040 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"User",
+				"UserFactory"
+			],
+			[
+				"Use",
+				"UserEditCtrl"
+			],
+			[
+				"Us",
+				"UserShowCtrl"
+			],
+			[
+				"con",
+				"controller"
+			],
+			[
+				"enc",
+				"encryptPassword"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"DB",
+				"DB_TYPE"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"var",
+				"var"
+			],
+			[
+				"exp",
+				"express"
+			],
+			[
+				"mo",
+				"models"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"true",
+				"truetype"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"twitter",
+				"twitterglobe"
+			],
+			[
+				"get",
+				"get	Get Elements"
+			],
+			[
+				"box",
+				"box-text"
+			],
+			[
+				"box-",
+				"box-click"
+			],
+			[
+				"out",
+				"outside"
+			],
+			[
+				"less",
+				"lessMiddleware"
+			],
+			[
+				"fb",
+				"fb-text"
+			],
+			[
+				"go",
+				"go-text"
+			],
+			[
+				"tw",
+				"tw-text"
+			],
+			[
+				"sta",
+				"startRGB"
+			],
+			[
+				"star",
+				"startRGB"
+			],
+			[
+				"rgb",
+				"rgbStart"
+			],
+			[
+				"start",
+				"startCoord"
+			],
+			[
+				"strt",
+				"startCoord"
+			],
+			[
+				"color",
+				"colorDirection"
+			],
+			[
+				"rg",
+				"rgbStart"
+			],
+			[
+				"sec",
+				"seconds"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"create",
+				"createPath"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"m",
+				"meta	Tag"
+			],
+			[
+				"jav",
+				"javascript"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"button",
+				"buttontext"
+			],
+			[
+				"curr",
+				"currentWorldHashtags"
+			],
+			[
+				"so",
+				"sockets"
+			],
+			[
+				"stream",
+				"stream"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"twee",
+				"tweetFilter"
+			],
+			[
+				"tweet",
+				"tweet_globe"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"dis",
+				"disconnect"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"rota",
+				"rotate"
+			],
+			[
+				"proj",
+				"proj"
+			],
+			[
+				"long",
+				"longitude"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"ha",
+				"hashtags"
+			],
+			[
+				"hash",
+				"hashtags"
+			],
+			[
+				"has",
+				"hashtag"
+			],
+			[
+				"tren",
+				"trendingHashtags"
+			],
+			[
+				"location",
+				"locationType"
+			],
+			[
+				"trend",
+				"trends_world"
+			],
+			[
+				"twitt",
+				"twitterStream"
+			],
+			[
+				"y",
+				"yql"
+			],
+			[
+				"connec",
+				"connection"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"fil",
+				"hashtagFilter"
+			],
+			[
+				"trends_",
+				"trends_country"
+			],
+			[
+				"sear",
+				"searchHashtags"
+			],
+			[
+				"coun",
+				"countryHashtags"
+			],
+			[
+				"wor",
+				"worldHashtags"
+			],
+			[
+				"trends",
+				"trends_country"
+			],
+			[
+				"acc",
+				"access_token_secret"
+			],
+			[
+				"pr",
+				"process"
+			],
+			[
+				"consumer",
+				"consumer_key"
+			],
+			[
+				"pop",
+				"popover"
+			],
+			[
+				"mou",
+				"mouse_rotation"
+			],
+			[
+				"count",
+				"country"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"rot",
+				"rotating"
+			],
+			[
+				"ro",
+				"rotation"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ove",
+				"overflow"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"f",
+				"for"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"xy",
+				"xy2"
+			],
+			[
+				"path",
+				"pathLimit"
+			],
+			[
+				"sel",
+				"select	<select>"
+			],
+			[
+				"clip",
+				"clipAngle"
+			],
+			[
+				"remove",
+				"removeTweetId"
+			],
+			[
+				"twe",
+				"tweetId"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"point",
+				"pointRadius"
+			],
+			[
+				"rou",
+				"routes"
+			],
+			[
+				"home_",
+				"home_link"
+			],
+			[
+				"ifr",
+				"iframe"
+			],
+			[
+				"jQ",
+				"jQueryUI"
+			],
+			[
+				"boot",
+				"bootstrap"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"x",
+				"xSize"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"arra",
+				"arrayC"
+			],
+			[
+				"translate",
+				"translate"
+			],
+			[
+				"tras",
+				"transition"
+			],
+			[
+				"ya",
+				"y_axis"
+			],
+			[
+				"rotat",
+				"rotation"
+			],
+			[
+				"roa",
+				"rotation"
+			],
+			[
+				"project",
+				"project_nav"
+			],
+			[
+				"warp",
+				"warp_img"
+			],
+			[
+				"styl",
+				"style"
+			],
+			[
+				"ra",
+				"radius"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"slid",
+				"slideToggle"
+			],
+			[
+				"warp_",
+				"warp_display"
+			],
+			[
+				"b",
+				"Boolean"
+			],
+			[
+				"Co",
+				"Continuous"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"wid",
+				"widthClass"
+			],
+			[
+				"quo",
+				"quotes_block"
+			],
+			[
+				"STA",
+				"STATIC_ROOT"
+			],
+			[
+				"F",
+				"False"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: htmlboiler"
+			],
+			[
+				"pa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"git: a",
+				"Git: Amend Commit"
+			],
+			[
+				"git: ad",
+				"Git: Add..."
+			],
+			[
+				"git: com",
+				"Git: Commit"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"git:c",
+				"Git: Commit"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ht",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: htm",
+				"Snippet: htmlboiler"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: html fo",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: html f",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: html",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"Snippet: cod",
+				"Snippet: CodeIgniter Controller"
+			],
+			[
+				"Snippet: mod",
+				"Snippet: CodeIgniter Model"
+			],
+			[
+				"htm",
+				"Snippet: HTML - HTML foundation"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			],
+			[
+				"fold",
+				"Folders List"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/zguy981/portfolio/index.php",
+		"/Users/zguy981/RememberWhenWe/server.js",
+		"/Users/zguy981/RememberWhenWe/models/config.js",
+		"/Users/zguy981/Projects/pshare old/config/passport.js",
+		"/Users/zguy981/RememberWhenWe/models/User.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/routes.js",
+		"/Users/zguy981/RememberWhenWe/views/header.ejs",
+		"/Users/zguy981/RememberWhenWe/.gitignore",
+		"/Users/zguy981/RememberWhenWe/models/index.js",
+		"/Users/zguy981/RememberWhenWe/controllers/photo/photo.controller.js",
+		"/Users/zguy981/RememberWhenWe/controllers/event/event.controller.js",
+		"/Users/zguy981/RememberWhenWe/config/auth/index.js",
+		"/Users/zguy981/RememberWhenWe/config/local.env.js",
+		"/Users/zguy981/rememberwhenwe/public/stylesheets/style.less",
+		"/Users/zguy981/Projects/zrecipebox/config.ru",
+		"/Users/zguy981/Projects/zrecipebox/Gemfile",
+		"/Users/zguy981/Projects/zrecipebox/config/environments/development.rb",
+		"/Users/zguy981/Projects/zrecipebox/app/assets/stylesheets/application.css.scss",
+		"/Users/zguy981/Projects/zrecipebox/app/views/recipes/index.html.erb",
+		"/Users/zguy981/Projects/zrecipebox/app/views/sessions/index.html.erb",
+		"/Users/zguy981/Projects/zrecipebox/config/application.rb",
+		"/Users/zguy981/Projects/zrecipebox/config/puma.rb",
+		"/Users/zguy981/Projects/twitterGlobe/public/javascript/globe.js",
+		"/Users/zguy981/Projects/twitterGlobe/config.json",
+		"/Users/zguy981/Projects/twitterGlobe/routes/sockets.js",
+		"/Users/zguy981/Projects/twitterGlobe/.gitignore",
+		"/Users/zguy981/Projects/twitterGlobe/.elasticbeanstalk/config",
+		"/Users/zguy981/Projects/twitterGlobe/.elasticbeanstalk/config.yml",
+		"/Users/zguy981/.ssh/aws-eb.pub",
+		"/Users/zguy981/.ssh/aws-eb",
+		"/Users/zguy981/RememberWhenWe/config/routes.js",
+		"/Users/zguy981/RememberWhenWe/controllers/user/user.controller.js",
+		"/Users/zguy981/RememberWhenWe/controllers/photo/index.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/controllers/users.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/partials/auth.html",
+		"/Users/zguy981/RememberWhenWe/views/index.ejs",
+		"/Users/zguy981/RememberWhenWe/bin/www",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/controllers/photos.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/controllers/events.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/services/photoFactory.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/services/userFactory.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/app.js",
+		"/Users/zguy981/RememberWhenWe/public/javascripts/services/eventFactory.js",
+		"/Users/zguy981/RememberWhenWe/config/auth/index.html",
+		"/Users/zguy981/RememberWhenWe/views/footer.ejs",
+		"/Users/zguy981/RememberWhenWe/config/auth/auth.service.js",
+		"/Users/zguy981/RememberWhenWe/controllers/users/index.js",
+		"/Users/zguy981/RememberWhenWe/controllers/event/index.js",
+		"/Users/zguy981/Projects/twitterGlobe/server.js",
+		"/Users/zguy981/RememberWhenWe/package.json",
+		"/Users/zguy981/Projects/twitterGlobe/views/index.ejs",
+		"/Users/zguy981/RememberWhenWe/config/environment/index.js",
+		"/Users/zguy981/Projects/kwikimart/views/index.ejs",
+		"/Users/zguy981/RememberWhenWe/public/stylesheets/style.less",
+		"/Users/zguy981/RememberWhenWe/public/stylesheets/style.css",
+		"/Users/zguy981/RememberWhenWe/config/environment/development.js",
+		"/Users/zguy981/RememberWhenWe/config/environment/production.js",
+		"/Users/zguy981/RememberWhenWe/config/environment/test.js",
+		"/Users/zguy981/RememberWhenWe/controllers/auth/index.js",
+		"/Users/zguy981/RememberWhenWe/npm-debug.log",
+		"/Users/zguy981/projects/pshare/public/css/",
+		"/Users/zguy981/.bash_profile",
+		"/Users/zguy981/bashprofile",
+		"/Users/zguy981/.bashprofile",
+		"/Users/zguy981/Projects/twitterGlobe/public/stylesheets/style.less",
+		"/Users/zguy981/Projects/twitterGlobe/routes/index.js",
+		"/Users/zguy981/Projects/twitterGlobe/package.json",
+		"/Users/zguy981/Projects/twitterGlobe/public/javascript/app.js",
+		"/Users/zguy981/Projects/twitterGlobe/public/javascript/app.min.js",
+		"/Users/zguy981/Projects/twitterGlobe/public/javascript/globe.min.js",
+		"/Users/zguy981/twitterGlobe/routes/sockets.js",
+		"/Users/zguy981/twitterGlobe/.git/awsdevtools/aws/dev_tools.py",
+		"/Users/zguy981/.aws/config",
+		"/Users/zguy981/Projects/twitterGlobe/index.ejs",
+		"/Users/zguy981/Projects/twitterGlobe/node_modules/twit/lib/twitter.js",
+		"/Users/zguy981/Projects/twitterGlobe/node_modules/twit/lib/parser.js",
+		"/Users/zguy981/Projects/twitterGlobe/node_modules/twit/lib/auth.js",
+		"/Users/zguy981/Projects/twitterGlobe/config.js",
+		"/Users/zguy981/Projects/twitterGlobe/config1.js",
+		"/Users/zguy981/Projects/twitterGlobe/node_modules/twitter/lib/twitter.js",
+		"/Users/zguy981/Projects/twitterGlobe/node_modules/twitter-stream-oauth/lib/user-stream.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 7/Express/Intermediate_1/routes/index.js",
+		"/Users/zguy981/portfolio/assets/javascripts/starryfield.js",
+		"/Users/zguy981/Projects/twitterGlobe/routes/stream.js",
+		"/Users/zguy981/Dropbox/Coding Dojo/Week 7/Express/Intermediate_1/app.js",
+		"/Users/zguy981/portfolio/assets/javascripts/portfolio.js",
+		"/Users/zguy981/twitterGlobe/server.js",
+		"/Users/zguy981/twitterGlobe/public/stylesheets/style.less",
+		"/Users/zguy981/Projects/pazgroupchat/views/index.ejs",
+		"/Users/zguy981/portfolio/assets/javascripts/starryfield.min.js",
+		"/Users/zguy981/twitterGlobe/routes/stream.js",
+		"/Users/zguy981/twitterGlobe/package.json",
+		"/Users/zguy981/Projects/pazgroupchat/package.json",
+		"/Users/zguy981/Projects/twitterGlobe/public/less/style.less",
+		"/Users/zguy981/Projects/twitterGlobe/public/stylesheets/stylesheet.css",
+		"/Users/zguy981/Projects/pazgroupchat/routes/index.js",
+		"/Users/zguy981/Projects/pazgroupchat/app.js",
+		"/Users/zguy981/Desktop/index.html",
+		"/Users/zguy981/portfolio/.gitignore",
+		"/Users/zguy981/portfolio/new-connection.php",
+		"/Users/zguy981/Desktop/stylesheet.css",
+		"/Users/zguy981/Desktop/twitterGlobe.html",
+		"/Users/zguy981/.ssh/known_hosts",
+		"/Users/zguy981/.ssh/godaddy_rsa.pub",
+		"/Users/zguy981/.ssh/id_rsa.pub",
+		"/Users/zguy981/portfolio/ga_cron.php",
+		"/Users/zguy981/portfolio/assets/css/stylesheet-desktop.css",
+		"/Users/zguy981/portfolio/assets/css/stylesheet-mobile.css",
+		"/Users/zguy981/portfolio/assets/css/stylesheet-mobile.min.css",
+		"/Users/zguy981/portfolio/assets/css/stylesheet-tablet.css",
+		"/Users/zguy981/portfolio/assets/css/stylesheet-tablet.min.css",
+		"/Users/zguy981/portfolio/assets/css/stylesheet-desktop.min.css",
+		"/Users/zguy981/portfolio/assets/javascripts/portfolio.min.js",
+		"/Users/zguy981/portfolio/assets/css/stylesheet.css",
+		"/Users/zguy981/portfolio/email.php",
+		"/Users/zguy981/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/zguy981/Library/Application Support/Sublime Text 2/Packages/Minify/Minify.sublime-settings",
+		"/Users/zguy981/Library/Application Support/Sublime Text 2/Packages/Minifier/Minifier.sublime-settings",
+		"/Users/zguy981/Library/Application Support/Sublime Text 2/Packages/User/Minify.sublime-settings",
+		"/Users/zguy981/Desktop/tagcloud.js",
+		"/Users/zguy981/portfolio/resume.html",
+		"/Users/zguy981/portfolio/lib/css/theme/source/default.scss",
+		"/Users/zguy981/portfolio/lib/css/theme/default.css",
+		"/Users/zguy981/portfolio/lib/css/theme/default.min.css",
+		"/Users/zguy981/portfolio/skills.php",
+		"/Users/zguy981/portfolio/bio.html",
+		"/Users/zguy981/portfolio/assets/javascripts/warp.min.js",
+		"/Users/zguy981/warp.js/index.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"puma",
+			"",
+			"application.html.erb",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"authprovider",
+			"//",
+			"fa-facebook",
+			"asset",
+			"font-url",
+			"eager",
+			"grey",
+			"myApp",
+			"javascripts",
+			"order",
+			"product",
+			"customer",
+			"user",
+			" {",
+			"#FFFFFF",
+			"server",
+			"app",
+			"config",
+			"5px 10px 5px",
+			"using",
+			"360",
+			"this.startRGB",
+			"rgbStart",
+			"console",
+			"255",
+			"[0]",
+			"[2]",
+			"rgbStart",
+			"rotate(30deg)",
+			"#2A2A24",
+			"console",
+			"search",
+			"element",
+			"data",
+			"console",
+			"destroy",
+			"space",
+			"greatCircle",
+			"points",
+			"lines",
+			"end",
+			" + '\"'",
+			"'\"' + ",
+			" +",
+			"'\"' + ",
+			"twit",
+			"stream",
+			"</li>",
+			"3%",
+			"class",
+			"hf",
+			"twitterTrends",
+			"trends_world[0].trends",
+			"[0].trends",
+			"data",
+			"#000000",
+			"Off",
+			"On",
+			"trends",
+			"data",
+			"5",
+			"@topright;",
+			"topleft",
+			"geo",
+			"sky",
+			"geo.coordinates[1]",
+			"geo.coordinates[0]",
+			")",
+			"util.inspect(",
+			"scale",
+			"00a5ff",
+			"projection",
+			"places",
+			".attr(\"class\", \"noclicks\")",
+			"path",
+			"svg",
+			"$(window).width()",
+			"lato",
+			"pointer",
+			"transform",
+			"controls",
+			"googleapis",
+			"lato",
+			" id='resumeviewer'",
+			"reveal",
+			".9",
+			"- ySize",
+			"- xSize",
+			"ySize / 2",
+			"xSize / 2 ",
+			"100",
+			"yOffset",
+			"Offset",
+			"offset",
+			"Offset",
+			"offset",
+			"d.a",
+			"Animate",
+			"Math.floor(Math.random()*(Math.round(Math.random()*2)-1)*360)",
+			"0px",
+			"popover",
+			", #warp_display",
+			"ware_display",
+			"Boolean(\"FALSE\")",
+			"username",
+			"input[name='password']",
+			"input[name='username']",
+			"]",
+			"http://www.pazellmer.com",
+			"username",
+			"password",
+			"username",
+			"db",
+			"images",
+			"flash",
+			"print",
+			"False",
+			"True",
+			"\"author_form\": author, ",
+			"quote",
+			"overflow",
+			"button",
+			"red",
+			"]",
+			"[",
+			"shuffColors",
+			"colors",
+			"quout"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"y",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.758053298727,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 212.0
+	},
+	"output.find_results":
+	{
+		"height": 108.0
+	},
+	"output.git":
+	{
+		"height": 152.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true
+}
