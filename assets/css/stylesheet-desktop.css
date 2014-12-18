@@ -451,6 +451,15 @@ span.clouditem {
 #contact td {
     vertical-align: top
 }
+#contact_form label {
+    font-size: .75em;
+    padding-right: .25em!important;
+}
+#contact_form input[type="submit"] {
+    display: block;
+    margin: 10px!important;
+    padding: 5px 25px!important
+}
 #contactinfo {
     min-width: 300px
 }
@@ -468,21 +477,6 @@ span.clouditem {
 }
 #controlpanelallowed input {
     display: block
-}
-#contact_form input {
-    display: block;
-    margin: 10px!important;
-    padding: 5px!important
-}
-#contact_form textarea {
-    display: block;
-    margin: 10px!important;
-    padding: 5px!important
-}
-#contact_form input[type="submit"] {
-    display: block;
-    margin: 10px!important;
-    padding: 5px 25px!important
 }
 #footer-nav li {
     display: inline-block;

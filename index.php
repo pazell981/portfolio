@@ -125,8 +125,8 @@
               </div><!-- end of #project_accord -->
             </div><!-- end of #project nav -->
             <div id='warpContainer'       
-                  data-xOffset='30'   
-                  data-yOffset='20' 
+                  data-xOffset='100'   
+                  data-yOffset='100' 
                   data-shape='circle' 
                   data-continuous='TRUE' 
                   data-xSize='100' 
@@ -250,7 +250,7 @@
                 </div><!-- end of row -->
               </section>
               <section id='contact' class='col-xs-12 col-sm-12 col-md-12 col-lg-12' itemscope itemtype="https://schema.org/ContactPage">
-                <h1 class='pointer'>Contact</h1>
+                <h1>Contact</h1>
                   <table>
                     <tbody>
                       <tr>
@@ -278,16 +278,39 @@
                               <button type="button" class="close" data-dismiss="alert">&times;</button>
                               <p>Thank you for your interest, your message has been sent!</p>
                             </div><!-- end of #form_success -->
-                            <div class='alert alert-error' id='form_failure'>
+                            <div class='alert alert-danger' id='form_failure'>
                               <button type="button" class="close" data-dismiss="alert">&times;</button>
                               <p>I am sorry there was an issues sending your message please try again.</p>
                             </div><!-- end of #form_failure -->
-                            <form id='contact_form' class='form-horizontal' action='/admin/email.php' method='post'>
+                            <form id='contact_form' class='form-horizontal' action='/admin/email.php' method='post' role='form'>
                               <input type='hidden' name='secure' value='secure'>
-                              <input type='text' name='name' placeholder='Your Name' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' required>
-                              <input type='email' name='email' placeholder='Your E-mail Address' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' required>
-                              <input type='text' name='subject' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' placeholder='Subject'>
-                              <textarea name='message' rows='4' class='form-control col-xs-12 col-sm-12 col-md-12 col-lg-12' placeholder='Message' required></textarea>
+                              <div class="form-group row">
+                                <label for='name' class='control-label col-xs-4 col-sm-4 col-md-4 col-lg-4'>Your Name</label>
+                                <div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>
+                                  <input type='text' name='name' placeholder='Name' class='form-control' required>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for='email' class='control-label col-xs-4 col-sm-4 col-md-4 col-lg-4'>Your Email</label>
+                                <div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>
+                                  <div class='input-group'>
+                                    <span class='input-group-addon'>@</span>
+                                      <input type='email' name='email' placeholder='E-mail' class='form-control' required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for='subject' class='control-label col-xs-4 col-sm-4 col-md-4 col-lg-4'>Subject</label>
+                                <div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>
+                                  <input type='text' name='subject' placeholder='Subject' class='form-control' required>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for='message' class='control-label col-xs-4 col-sm-4 col-md-4 col-lg-4'>Message</label>
+                                <div class='col-xs-8 col-sm-8 col-md-8 col-lg-8'>
+                                  <textarea name='message' rows='4' class='form-control' placeholder='Message' required></textarea>
+                                </div>
+                              </div>
                               <input type='submit' value='Send' class='btn btn-lg btn-info pull-right'>
                             </form>
                           </div><!-- end of #contactpanel -->
