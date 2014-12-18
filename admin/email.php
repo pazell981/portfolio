@@ -1,8 +1,8 @@
 <?php
-	function sanitize(&$array){
-		foreach($array as &$data){
-			$data = str_replace(array("\r", "\n", "%0a", "%0d"), '', stripslashes($data)); 			
-		}
+	function sanitize($data){
+		if ( preg_match( "/[\r\n]/", $data ) {
+			header('location: ../500.shtml');
+			die();		}
 	}
 
 	if (!isset($_POST["secure"])){
@@ -14,7 +14,7 @@
 		$name = sanitize($_POST['name']);
 		$email = sanitize($_POST['email']);
 		$subject = "PAZellmer.com Contact Request: " . sanitize($_POST['subject']);
-		$message = sanitize($_POST['message']);
+		$message = $_POST['message'];
 		$headers = "From: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Date: " . date_format($now, 'r') ."\r\n"; 

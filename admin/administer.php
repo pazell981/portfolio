@@ -4,7 +4,7 @@
     session_start();
     include 'dbConnection.php';
     if(!isset($_SESSION['userid'])){
-      header('location: logoff.php');
+      header('location: 401.shtml');
       die();
     } else {
       $userid = $_SESSION['userid'];
