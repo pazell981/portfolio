@@ -1,14 +1,20 @@
 <?php
+	function sanitize(&$array){
+		foreach($array as &$data){
+			$data = str_replace(array("\r", "\n", "%0a", "%0d"), '', stripslashes($data)); 			
+		}
+	}
+
 	if (!isset($_POST["secure"])){
 		header('location: ../403.shtml');
 		die();
 	} else {
 		date_default_timezone_set( "America/Los_Angeles" ); 
 		$now = new DateTime(); 
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$subject = "PAZellmer.com Contact Request: " . $_POST['subject'];
-		$message = $_POST['message'];
+		$name = sanitize($_POST['name']);
+		$email = sanitize($_POST['email']);
+		$subject = "PAZellmer.com Contact Request: " . sanitize($_POST['subject']);
+		$message = sanitize($_POST['message']);
 		$headers = "From: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Date: " . date_format($now, 'r') ."\r\n"; 
