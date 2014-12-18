@@ -1,17 +1,4 @@
 <?php
-	// function sanitize($data){
-	// 	if ( preg_match( "/[\r\n]/", $data, $matches) {
-	// 		$output["status"] = "forbidden";
-	// 		$output["matches"] = $matches;
-	// 		var_dump($output);
-	// 		die();
-	// 		echo json_encode($output);
-	// 		die();
-	// 	} else {
-	// 		return $data;
-	// 	}
-	// }
-
 	if (!isset($_POST["secure"])){
 		header('location: ../403.shtml');
 		die();
