@@ -20,8 +20,6 @@
 		} else {
 			$output["status"] = "failure";
 		}
-		var_dump($output);
-		die();
 		echo json_encode($output);
 		die();
 	}
