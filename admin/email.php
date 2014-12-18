@@ -18,10 +18,10 @@
 	} else {
 		date_default_timezone_set( "America/Los_Angeles" ); 
 		$now = new DateTime(); 
-		$name = filter_var($_POST['name'], FILTER_SANITIZE_EMAIL);
-		$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-		$subject = "PAZellmer.com Contact Request: " . filter_var($_POST['subject'], FILTER_SANITIZE_EMAIL);
-		$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW, FILTER_FLAG_STRIP_HIGH);
+		$name = filter_var($_POST['name'], FILTER_SANITIZE_EMAIL, FILTER_NULL_ON_FAILURE);
+		$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL, FILTER_NULL_ON_FAILURE);
+		$subject = "PAZellmer.com Contact Request: " . filter_var($_POST['subject'], FILTER_SANITIZE_EMAIL, FILTER_NULL_ON_FAILURE);
+		$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH | FILTER_NULL_ON_FAILURE);
 		$headers = "From: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Date: " . date_format($now, 'r') ."\r\n"; 
