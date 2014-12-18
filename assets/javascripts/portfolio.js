@@ -196,21 +196,21 @@ $(document).ready(function() {
         $("#project_nav").slideToggle("fast");
         $("#warpContainer").fadeToggle("slow")
     });
-    $("#contact_form").submit(function() {
-        $.post($(this).attr("action"), $(this).serialize(), function(e) {
-            if (e.status == "success") {
-                $("#form_success").fadeIn()
-            } else if (e.status == "failure") {
-                $("#form_failure").fadeIn()
-            } else if (e.status == "forbidden"){
-                window.location = "http://www.pazellmer.com/403.shtml";
-            }
-        }, "json");
-        $("input[type=text]").val("");
-        $("input[type=email]").val("");
-        $("textarea").val("");
-        return false
-    });
+    // $("#contact_form").submit(function() {
+    //     $.post($(this).attr("action"), $(this).serialize(), function(e) {
+    //         if (e.status == "success") {
+    //             $("#form_success").fadeIn()
+    //         } else if (e.status == "failure") {
+    //             $("#form_failure").fadeIn()
+    //         } else if (e.status == "forbidden"){
+    //             window.location = "http://www.pazellmer.com/403.shtml";
+    //         }
+    //     }, "json");
+    //     $("input[type=text]").val("");
+    //     $("input[type=email]").val("");
+    //     $("textarea").val("");
+    //     return false
+    // });
     Reveal.addEventListener("profiles", function() {
         // $("#profiles img").trigger("unveil");
         setTimeout(function() {

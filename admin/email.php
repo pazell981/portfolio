@@ -1,11 +1,16 @@
 <?php
-	function sanitize($data){
-		if ( preg_match( "/[\r\n]/", $data ) {
-			$output["status"] = "forbidden";
-			echo json_encode($output);
-			die();		
-		}
-	}
+	// function sanitize($data){
+	// 	if ( preg_match( "/[\r\n]/", $data, $matches) {
+	// 		$output["status"] = "forbidden";
+	// 		$output["matches"] = $matches;
+	// 		var_dump($output);
+	// 		die();
+	// 		echo json_encode($output);
+	// 		die();
+	// 	} else {
+	// 		return $data;
+	// 	}
+	// }
 
 	if (!isset($_POST["secure"])){
 		header('location: ../403.shtml');
@@ -13,10 +18,10 @@
 	} else {
 		date_default_timezone_set( "America/Los_Angeles" ); 
 		$now = new DateTime(); 
-		$name = sanitize($_POST['name']);
-		$email = sanitize($_POST['email']);
-		$subject = "PAZellmer.com Contact Request: " . sanitize($_POST['subject']);
-		$message = $_POST['message'];
+		$name = filter_var($_POST['name'], FILTER_SANITIZE_EMAIL);
+		$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+		$subject = "PAZellmer.com Contact Request: " . filter_var($_POST['subject'], FILTER_SANITIZE_EMAIL);
+		$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW, FILTER_FLAG_STRIP_HIGH);
 		$headers = "From: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 		$headers .= "Date: " . date_format($now, 'r') ."\r\n"; 
@@ -28,8 +33,9 @@
 		} else {
 			$output["status"] = "failure";
 		}
+		var_dump($output)
+		die();
 		echo json_encode($output);
-		die;
+		die();
 	}
-
 ?>
