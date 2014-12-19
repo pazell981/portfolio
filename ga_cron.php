@@ -1,5 +1,5 @@
 <?
-require 'jsMin.php'
+require 'jsMin.php';
 
 function getRemoteFile($remoteFile, $localfile){
   // Connection time out
@@ -68,14 +68,14 @@ function getRemoteFile($remoteFile, $localfile){
 // Remote file to download
 $remoteFile = 'http://google-analytics.com/analytics.js';
 $localfile = '/home/pazell/public_html/analytics.js';
-getRemoteFile($remoteFile, $localfile)
+getRemoteFile($remoteFile, $localfile);
 $minLocalfile = JSMin::minify(file_get_contents($localfile));
 file_put_contents('analytics.min.js', $minLocalfile);
 
 //For Cpanel it will be /home/USERNAME/public_html/ga.js
 $remoteFile2 = 'http://www.google-analytics.com/plugins/ua/linkid.js';
 $localfile2 = '/home/pazell/public_html/linkid.js';
-getRemoteFile($remoteFile2, $localfile2)
+getRemoteFile($remoteFile2, $localfile2);
 $minLocalfile2 = JSMin::minify(file_get_contents($localfile2));
 file_put_contents('linkid.min.js', $minLocalfile2);
 
