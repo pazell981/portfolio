@@ -6,7 +6,7 @@
     if (isset($_SESSION['userid'])) {
       $userid = $_SESSION['userid'];
     } else {
-      header("location: ../401.shtml")
+      header("location: ../401.shtml");
     }
     if(!isset($_SESSION['error'])){
       $_SESSION['error']=FALSE;
