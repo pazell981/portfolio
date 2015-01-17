@@ -236,7 +236,7 @@
                 <h1>Skill Set</h1>
                 <div tagcloud bw>
                   <?php 
-                    $skills = array('Website Design', 'HTML5', 'CSS3', 'd3 JS', 'Foundation', 'jQuery UI', 'Twitter Bootstrap', 'jQuery', 'Responsive Design', 'JavaScript', 'Node JS', 'Express JS', 'Angular', 'MongoDB', 'npm', 'socket.io', 'Passport.js', 'Git', 'Ruby', 'PHP', 'AJAX', 'Ruby on Rails', 'Database Design', 'MySQL','SQLite', 'CodeIgniter', 'PostgreSQL', 'Adobe Photoshop','Python', 'Django', 'LESS');
+                    $skills = array('Website Design', 'HTML5', 'CSS3', 'd3 JS', 'Foundation', 'jQuery UI', 'Twitter Bootstrap', 'jQuery', 'Responsive Design', 'JavaScript', 'Node JS', 'Express JS', 'Angular', 'MongoDB', 'npm', 'socket.io', 'Passport.js', 'Git', 'Ruby', 'PHP', 'AJAX', 'Ruby on Rails', 'Database Design', 'MySQL','SQLite', 'CodeIgniter', 'PostgreSQL', 'Adobe Photoshop','Python', 'Django', 'LESS', 'Knockout JS');
                     shuffle($skills);
                     foreach ($skills as $skill) {
                         echo "$skill \n";
