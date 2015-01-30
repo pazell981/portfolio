@@ -163,6 +163,9 @@ html, body {
     height: 100%;
     width: 100%
 }
+a{
+    color: rgb(187, 187, 187)!important;
+}
 .row, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
     padding: 0!important;
     margin: 0!important
@@ -442,15 +445,11 @@ span.clouditem {
     width: 25%;
     height: 25%;
     opacity: 1!important;
-    top: 100%;
-      box-shadow: 0 4px 0 #ccc,0 5px 0 #c9c9c9,0 6px 0 #bbb,0 7px 0 #b9b9b9,0 8px 0 #aaa,0 9px 4px rgba(0,0,0,0.1),0 0 8px rgba(0,0,0,0.1),0 1px 6px rgba(0,0,0,0.3),0 6px 8px rgba(0,0,0,0.2),0 8px 13px rgba(0,0,0,0.25),0 23px 23px rgba(0,0,0,0.15);
+    top: 100%
 }
 #contact img {
     width: 40px;
-    margin: 10px 0;
-    background: none;
-    border: none;
-    box-shadow: none;
+    margin: 10px 0
 }
 #contact td {
     vertical-align: top
@@ -554,7 +553,7 @@ span.clouditem {
     transform: translate(-50%, -175%)
 }
 #profiles img {
-    width: 15%;
+    width: 15%
     background: none;
     border: none;
     box-shadow: none;
@@ -652,7 +651,7 @@ span.clouditem {
     height: 100vh;
     width: 100vw;
     margin: 0!important;
-    background-color: #222;
+    background-color: rgb(0, 136, 204);
     z-index: 100;
     left: 0
 }
@@ -662,12 +661,12 @@ span.clouditem {
     width: 100vw;
     top: 0;
     margin: 0!important;
-    background: -moz-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(187, 187, 187, .9) 100%);
-    background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, rgba(255, 255, 255, .9)), color-stop(100%, rgba(187, 187, 187, .9)));
-    background: -webkit-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(187, 187, 187, .9) 100%);
-    background: -o-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(187, 187, 187, .9) 100%);
-    background: -ms-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(187, 187, 187, .9) 100%);
-    background: radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(187, 187, 187, .9) 100%);
+    background: -moz-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(0, 136, 204, .9) 100%);
+    background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, rgba(255, 255, 255, .9)), color-stop(100%, rgba(0, 136, 204, .9)));
+    background: -webkit-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(0, 136, 204, .9) 100%);
+    background: -o-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(0, 136, 204, .9) 100%);
+    background: -ms-radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(0, 136, 204, .9) 100%);
+    background: radial-gradient(center, circle cover, rgba(255, 255, 255, .9) 0, rgba(0, 136, 204, .9) 100%);
     z-index: 105;
     left: 0
 }
