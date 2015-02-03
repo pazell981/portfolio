@@ -338,27 +338,45 @@ if (isset($_SESSION["errors"])) {
         </div><!-- end of #controlpanel -->
         <div id='controlpanelallowed' class='info'>
           <button class='close pull-right'>&times;</button>
-          <?php
-          if($errors["email"]==TRUE){
-            echo "<h3 class='error'>There was an error verifying your e-mail, please try to log-in again.</h3>";
-          }
-          if($errors["password"]==TRUE){
-            echo "<h3 class='error'>There was an error verifying your password, please try to log-in again.</h3>";
-          }
-          ?>
-          <h3 class='pull-left'>Please login:</h3>
-          <form action='/admin/login.php' method='post' class='form-horizontal'>
-            <input type='hidden' value='secure' name='secure'>
-            <div class='form-group'>
-              <label for='email' class="control-label">E-mail</label>
-              <input type='text' placeholder='E-mail' name='email' class='form-control'>
+          <div class='container-fluid'>
+            <?php
+            if($errors["email"]==TRUE){
+              echo "<div class='alert alert-warning alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><p><span class='glyphicon glyphicon-warning-sign'></span><strong>Warning!</strong></p><p>There was an error verifying your e-mail, please try to log-in again.</p></div>";
+            }
+            if($errors["password"]==TRUE){
+              echo "<div class='alert alert-warning alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><p><span class='glyphicon glyphicon-warning-sign'></span><strong>Warning!</strong></p><p>There was an error verifying your password, please try to log-in again.</p></div>";
+            }
+            ?>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <h3 class='pull-left'>Please login:</h3>
+              </div>
             </div>
-            <div class='form-group'>
-              <label for='password' class="control-label">Password</label>
-              <input type='password' placeholder='Password' name='password' class='form-control'>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <form action='/admin/login.php' method='post' class='form-horizontal'>
+                  <input type='hidden' value='secure' name='secure'>
+                  <div class='form-group'>
+                    <div class='row'>
+                      <label for='email' class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">E-mail</label>
+                      <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
+                        <input type='text' placeholder='E-mail' name='email' class='form-control'>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='form-group'>
+                    <div class='row'>
+                      <label for='password' class="col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label">Password</label>
+                      <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
+                        <input type='password' placeholder='Password' name='password' class='form-control'>
+                      </div>
+                    </div>
+                  </div>
+                  <input type='submit' class='btn btn-info btn-large pull-right'>
+                </form>
+              </div>
             </div>
-            <input type='submit' class='btn btn-info btn-large pull-right'>
-          </form>
+          </div>
         </div><!-- end of #controlpanelallowed -->
       </div><!-- end of #control -->
       <div class = 'footer'>
@@ -474,3 +492,6 @@ ga('send', 'pageview');
 </script>
 </body>
 </html>
+<?php
+unset($_SESSION["errors"]);
+?>
