@@ -118,9 +118,13 @@
           <a href='logoff.php'>Log off</a>
         </div>
         <?php 
-          if($_SESSION['error']){
-            echo "<h3 class='alert alert-error'>" . $_SESSION['error'] . "</h3>";
+        if($_SESSION['error']){
+          echo "<div class='alert alert-error'><h3>" . $_SESSION['error'] . "</h3>";
+          if($_SESSION['error_details']){
+            echo "<p>" . $_SESSION['error_details'] . "</p>";
           }
+          echo "</div>";
+        }
           if($_SESSION['success']){
             echo "<h3 class='alert alert-success'>" . $_SESSION['success'] . "</h3>";
           }
@@ -130,32 +134,32 @@
           <input type='hidden' value='secure' name='secure'>
           <input type='hidden' value='<?php echo $userid; ?>' name='user_id'>
           <div class='form-group'>
-            <label for="title" class="col-md-4 col-lg-4">Title:  </label>
+            <label for="title" class="col-md-4 col-lg-4">Title</label>
             <input type='text' placeholder='Title' name='title' class="input-block-level col-md-8 col-lg-8">
           </div>
           <div class='form-group'>
-            <label for='url' class="col-md-4 col-lg-4">URL:  </label>
+            <label for='url' class="col-md-4 col-lg-4">URL</label>
             <input type='text' placeholder='URL' name='url' class="input-block-level col-md-8 col-lg-8">
           </div>
           <div class='form-group'>
-            <label for='description' class="col-md-4 col-lg-4">Description:  </label>
+            <label for='description' class="col-md-4 col-lg-4">Description</label>
             <textarea placeholder='Description' name='description' rows='4' class="input-block-level col-md-8 col-lg-8"></textarea>
           </div>
           <div class='form-group'>
-            <label for='date' class="col-md-4 col-lg-4">Date:  </label>
+            <label for='date' class="col-md-4 col-lg-4">Date</label>
             <input type='text' placeholder='Date' name='date' id='datepicker'  class="col-md-8 col-lg-8">
           </div>
           <div class='form-group'>
-            <label for='image' class="col-md-4 col-lg-4">Image File:  </label>
+            <label for='image' class="col-md-4 col-lg-4">Image File</label>
             <input type='file' name='image' class=" col-md-8 col-lg-8">
           </div>
           <input type='hidden' value='1' name='active'>
           <div class='form-group'>
-            <label for='tech_info' class="col-md-4 col-lg-4">Technical Description:  </label>
+            <label for='tech_info' class="col-md-4 col-lg-4">Technical Description</label>
             <textarea placeholder='Technical description' name='tech_info' rows='4' class="input-block-level col-md-8 col-lg-8"></textarea>
           </div>
           <div class='form-group'>
-            <label for='github_address' class="col-md-4 col-lg-4">Github URL:  </label>
+            <label for='github_address' class="col-md-4 col-lg-4">Github URL</label>
             <input type='text' placeholder='Git Hub Address' name="github_address"  class="input-block-level col-md-8 col-lg-8">
           </div>
           <input type='submit' value='Submit' class='btn btn-info pull-right'>
@@ -168,3 +172,7 @@
     <script src="../assets/javascripts/portfolio.js" charset="utf-8"></script>
   </body>
 </html>
+  <?php
+    $_SESSION['error']=FALSE;
+    $_SESSION['success']=FALSE;
+  ?>

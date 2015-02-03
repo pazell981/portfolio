@@ -30,6 +30,7 @@
       		header('location: administer.php');
       		die();
       	} else {
+          $_SESSION['error_details']=error_from_query();
       		$_SESSION['error']="There was an error adding the entry, please try again.";
         	header('location: addsite.php');
         	die();

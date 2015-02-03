@@ -36,4 +36,12 @@ function escape_this_string($string){
 	global $connection;
 	return $connection->real_escape_string($string);
 }
+function errorno_from_query(){
+	global $connection;
+	return $connection->errno;
+}
+function error_from_query(){
+	global $connection;
+	return $connection->error_list;
+}
 ?>

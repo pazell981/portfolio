@@ -19,7 +19,7 @@
         $tech = escape_this_string($_POST['tech_info']);
         $active = escape_this_string($_POST['active']);
         $git = escape_this_string($_POST['github_address']);
-        $query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . ", active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id=" . $project;
+        $query = "UPDATE projects SET user_id='". $user ."', title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . "', active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id='" . $project . "'";
       } else {
         move_uploaded_file($_FILES["image"]["tmp_name"], "assets/images/" . $_FILES["image"]["name"]);
       	$user = $_POST['user_id'];
@@ -32,7 +32,7 @@
         $active = escape_this_string($_POST['active']);
         $git = escape_this_string($_POST['github_address']);
       	$image = "assets/images/" . $_FILES["image"]["name"];
-      	$query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', image_location='" . $image ."', description='" . $desc . "', tech_info='" . $tech . ", active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time())  . "' WHERE id=" . $project;
+      	$query = "UPDATE projects SET user_id='". $user ."', title='" . $title . "', url='" . $url . "', date='" . $date . "', image_location='" . $image ."', description='" . $desc . "', tech_info='" . $tech . "', active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time())  . "' WHERE id='" . $project . "'";
       }
     } else {
       $user = $_POST['user_id'];
@@ -44,14 +44,17 @@
       $tech = escape_this_string($_POST['tech_info']);
       $active = escape_this_string($_POST['active']);
       $git = escape_this_string($_POST['github_address']);
-      $query = "UPDATE projects SET user_id=". $user .", title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . ", active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id=" . $project;
+      $query = "UPDATE projects SET user_id='". $user ."', title='" . $title . "', url='" . $url . "', date='" . $date . "', description='" . $desc . "', tech_info='" . $tech . "', active='". $active . "', github_address='" . $git . "', updated_at='" . date('Y-m-d H:i:s', time()) . "' WHERE id='" . $project . "'";
     }
   	if (run_mysql_query($query)){
   		$_SESSION['success']="Entry updated successfully.";
   		header('location: administer.php');
   		die();
   	} else {
-  		$_SESSION['error']="There was an error updating the entry, please try again.";
+      $error_list = implode(", ", error_from_query());
+      $error_num = errorno_from_query();
+      $_SESSION['error_details'] = $error_num . ": " . $error_list;
+  		$_SESSION['error'] = "There was an error updating the entry, please try again.";
     	header('location: editsite.php');
     	die();
   	}

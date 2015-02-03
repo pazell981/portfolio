@@ -176,6 +176,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "League Gothic", Impact, sans-serif
 }
+textarea{
+    resize: none
+}
 span.clouditem {
     padding-left: 0.15em;
     padding-right: 0.15em;
@@ -418,6 +421,9 @@ span.clouditem {
 #administration h3 {
     display: block
 }
+#administration .btn{
+    margin: 1em
+}
 #biopanel p, #biopanel ul {
     font-size: .75em!important
 }
@@ -480,7 +486,10 @@ span.clouditem {
     margin: 50px auto
 }
 #controlpanelallowed input {
-    display: block
+    display: block;
+}
+#controlpanelallowed label {
+    margin: .5em;
 }
 #footer-nav li {
     display: inline-block;

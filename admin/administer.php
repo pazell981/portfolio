@@ -122,7 +122,7 @@
         <h4>Select a project to edit:</h4>
           <form action='loadsite.php' method='post'>
             <input type='hidden' name='secure' value='secure'>
-            <select name='id'>
+            <select name='id' class="form-control input-block-level">
               <?php 
                 $proj_query = "SELECT * FROM projects ORDER BY date DESC";
                 $projects = fetch_all($proj_query);
@@ -133,7 +133,7 @@
                 }
               ?>
             </select>
-            <input type='submit' value='Edit Site' class='btn btn-default'>
+            <input type='submit' value='Edit Site' class='btn btn-info btn-large pull-right'>
           </form>
       </div>
     </div>

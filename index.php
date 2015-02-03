@@ -347,11 +347,17 @@ if (isset($_SESSION["errors"])) {
           }
           ?>
           <h3 class='pull-left'>Please login:</h3>
-          <form action='/admin/login.php' method='post'>
+          <form action='/admin/login.php' method='post' class='form-horizontal'>
             <input type='hidden' value='secure' name='secure'>
-            <input type='text' placeholder='E-mail' name='email'>
-            <input type='password' placeholder='Password' name='password'>
-            <input type='submit' class='btn btn-info btn-large'>
+            <div class='form-group'>
+              <label for='email' class="control-label">E-mail</label>
+              <input type='text' placeholder='E-mail' name='email' class='form-control'>
+            </div>
+            <div class='form-group'>
+              <label for='password' class="control-label">Password</label>
+              <input type='password' placeholder='Password' name='password' class='form-control'>
+            </div>
+            <input type='submit' class='btn btn-info btn-large pull-right'>
           </form>
         </div><!-- end of #controlpanelallowed -->
       </div><!-- end of #control -->
