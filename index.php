@@ -585,7 +585,7 @@ head.ready("Reveal", function () {
   Reveal.addEventListener("ready",function(event){
     setTimeout(function(){
       $("#curtain").fadeOut("")
-    },2000);
+    },3000);
   });
 });
 </script>
