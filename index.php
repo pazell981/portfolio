@@ -62,10 +62,138 @@ if (isset($_SESSION["errors"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <script src="lib/js/head.min.js" charset="utf-8"></script>
+  <script>
+  head.ready(function (){
+    head.load(["lib/css/normalize.min.css", "lib/css/bootstrap-responsive.min.css", "lib/css/bootstrap.min.css", "lib/css/jquery-ui-vader.min.css", "lib/css/reveal.min.css", "lib/css/theme/default.min.css", "lib/css/zenburn.min.css", "lib/css/animate.min.css"]);
+  });
+  if(head.screen.width<=767 && head.mobile==true){
+    head.load("assets/css/stylesheet-mobile.min.css")
+  }
+  if(head.screen.width>=768 && head.screen.width<=1199 && head.mobile==true){
+    head.load("assets/css/stylesheet-tablet.min.css")
+  }
+  if(head.screen.width>=1200 || head.desktop==true){
+    head.load("assets/css/stylesheet-desktop.min.css")
+  }
+  </script>
+  <style type='text/css'>
+  uiload {
+    display: inline-block;
+    position: relative; 
+  }
+  uiload > div {
+    position: relative; 
+  }
 
+  @-webkit-keyframes uil-ring-anim {
+    0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); 
+    }
+
+    100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); 
+    }
+  } 
+
+  @-moz-keyframes uil-ring-anim {
+    0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); 
+    }
+
+    100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); 
+    } 
+  }
+
+  @-ms-keyframes uil-ring-anim {
+    0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); 
+    }
+
+    100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); 
+    } 
+  }
+
+  @keyframes uil-ring-anim {
+    0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); 
+    }
+
+    100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); 
+    } 
+  }
+
+  .uil-ring-css {
+    background: none;
+    position: relative;
+    width: 200px;
+    height: 200px; 
+    left: 50%;
+    top: 50%;
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .uil-ring-css > div {
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 160px;
+    top: 20px;
+    left: 20px;
+    border-radius: 80px;
+    box-shadow: 0 6px 0 0 #13daec;
+    -ms-animation: uil-ring-anim 1s linear infinite;
+    -moz-animation: uil-ring-anim 1s linear infinite;
+    -webkit-animation: uil-ring-anim 1s linear infinite;
+    -o-animation: uil-ring-anim 1s linear infinite;
+    animation: uil-ring-anim 1s linear infinite; 
+  }
+  </style> 
 </head>
 <body>
   <div id="curtain" style="margin:0;padding:0;position: absolute;background: -moz-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -webkit-gradient(radial,center center,0,center center,100%,color-stop(0,rgba(255,255,255,1)),color-stop(100%,rgba(187,187,187,1)));background: -webkit-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -o-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: -ms-radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);background: radial-gradient(center,circle cover,rgba(255,255,255,1) 0,rgba(187,187,187,1) 100%);height: 100vh;width: 100vw;top: 0;left: 0;z-index: 1200;">
+    <div class='uil-ring-css'>
+      <div>
+      </div>
+    </div>
+    <img src="/assets/images/logo.svg" alt="logo" style="height:100px;left: 50%;position: absolute;top: 50%;-o-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">
   </div>
   <div class='container-fluid'>
     <div class='row'>
@@ -420,6 +548,17 @@ head.ready("jQuery", function () {
 head.ready("bootstrap", function () {
   head.load(["/lib/js/transition.min.js","/lib/js/tooltip.min.js",{popover:"/lib/js/popover.min.js"}]);
 });
+head.ready("jQueryUI", function () {
+  $(document).ready(function (){
+    $(".project_accord").accordion({ 
+      header: "h3",
+      heightStyle: "content"
+    });
+  });
+});
+head.ready("popover", function () {
+  head.load({portfolio:"assets/javascripts/portfolio.min.js"});
+});
 head.ready("Reveal", function () {
   Reveal.initialize({
     controls: true,
@@ -449,29 +588,6 @@ head.ready("Reveal", function () {
     },2000);
   });
 });
-head.ready("popover", function () {
-  head.load({portfolio:"assets/javascripts/portfolio.min.js"});
-});
-head.ready("jQueryUI", function () {
-  $(document).ready(function (){
-    $(".project_accord").accordion({ 
-      header: "h3",
-      heightStyle: "content"
-    });
-  });
-});
-head.ready(function (){
-  head.load(["lib/css/normalize.min.css", "lib/css/bootstrap-responsive.min.css", "lib/css/bootstrap.min.css", "lib/css/jquery-ui-vader.min.css", "lib/css/reveal.min.css", "lib/css/theme/default.min.css", "lib/css/zenburn.min.css", "lib/css/animate.min.css"]);
-});
-if(head.screen.width<=767 && head.mobile==true){
-  head.load("assets/css/stylesheet-mobile.min.css")
-}
-if(head.screen.width>=768 && head.screen.width<=1199 && head.mobile==true){
-  head.load("assets/css/stylesheet-tablet.min.css")
-}
-if(head.screen.width>=1200 || head.desktop==true){
-  head.load("assets/css/stylesheet-desktop.min.css")
-}
 </script>
 <script>
 (function(i, s, o, g, r, a, m) {
