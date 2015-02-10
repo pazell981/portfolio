@@ -5,7 +5,7 @@ $(document).ready(function() {
         Reveal.toggleOverview();
     })
     $("#welcome").click(function(){
-        Reveal.next();
+        Reveal.slide(3);
     })
     $(".controls").popover({
         animation: true,
